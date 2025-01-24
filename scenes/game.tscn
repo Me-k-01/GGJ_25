@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://djiuxpdwj878f"]
+
+[ext_resource type="PackedScene" uid="uid://j32elldmaqy2" path="res://scenes/player.tscn" id="1_tjsw1"]
+
+[sub_resource type="HeightMapShape3D" id="HeightMapShape3D_5kelg"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.43456, 3.03859)
+
+[node name="Player" parent="." instance=ExtResource("1_tjsw1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.922029, 0)
+
+[node name="Ground" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
+shape = SubResource("HeightMapShape3D_5kelg")
