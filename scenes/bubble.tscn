@@ -1,0 +1,28 @@
+[gd_scene load_steps=7 format=3 uid="uid://cwdsfrijytqev"]
+
+[ext_resource type="Shader" path="res://shaders/bubble.gdshader" id="1_iggj3"]
+[ext_resource type="Texture2D" uid="uid://1wioirrgd747" path="res://shaders/bubble_texture.jpg" id="2_toioc"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_4rc4x"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_8xmus"]
+noise = SubResource("FastNoiseLite_4rc4x")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6256q"]
+render_priority = 0
+shader = ExtResource("1_iggj3")
+shader_parameter/bubble_patern_scale = 1.0
+shader_parameter/distortion_smoothness = 0.06
+shader_parameter/distortion_power = 0.1
+shader_parameter/distortion_speed = 0.51
+shader_parameter/base_color = Color(0.74, 0.787667, 1, 1)
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_8xmus")
+shader_parameter/color_texture = ExtResource("2_toioc")
+
+[sub_resource type="SphereMesh" id="SphereMesh_3k3vi"]
+
+[node name="Bubble" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("ShaderMaterial_6256q")
+mesh = SubResource("SphereMesh_3k3vi")
