@@ -1,0 +1,73 @@
+[gd_scene load_steps=4 format=3 uid="uid://o7fi63ukde5v"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_08ahq"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 0.870588)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color(1, 1, 1, 0.337255)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_augei"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_46ivy"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 0.764706)
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -205.0
+offset_top = -66.0
+offset_right = 205.0
+offset_bottom = 66.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 14
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 28
+theme_override_styles/focus = SubResource("StyleBoxFlat_08ahq")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_08ahq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_08ahq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_augei")
+theme_override_styles/normal = SubResource("StyleBoxFlat_46ivy")
+text = "Resume"
+metadata/_edit_group_ = true
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 28
+theme_override_styles/focus = SubResource("StyleBoxFlat_08ahq")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_08ahq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_08ahq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_augei")
+theme_override_styles/normal = SubResource("StyleBoxFlat_46ivy")
+text = "Quit"
+metadata/_edit_group_ = true
