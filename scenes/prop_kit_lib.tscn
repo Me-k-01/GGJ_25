@@ -1,0 +1,859 @@
+[gd_scene load_steps=286 format=3 uid="uid://csr68qv26vuyd"]
+
+[ext_resource type="PackedScene" uid="uid://c0lyjddpjajue" path="res://assets/castle_kit/bridge-draw.glb" id="1_82kxw"]
+[ext_resource type="PackedScene" uid="uid://dhsgq4xorvcfl" path="res://assets/castle_kit/bridge-straight-pillar.glb" id="2_yt07c"]
+[ext_resource type="PackedScene" uid="uid://dhy46r88eldun" path="res://assets/castle_kit/bridge-straight.glb" id="3_5rs0f"]
+[ext_resource type="PackedScene" uid="uid://7jo685dh21qm" path="res://assets/castle_kit/door.glb" id="4_k6fhy"]
+[ext_resource type="PackedScene" uid="uid://ckbtpyirmvupq" path="res://assets/castle_kit/flag-banner-long.glb" id="5_ex8nf"]
+[ext_resource type="PackedScene" uid="uid://c36muhkvuhskx" path="res://assets/castle_kit/flag-banner-short.glb" id="6_mia4r"]
+[ext_resource type="PackedScene" uid="uid://bqaft8eg8bvul" path="res://assets/castle_kit/flag-pennant.glb" id="7_dc723"]
+[ext_resource type="PackedScene" uid="uid://c48gib4p3ki51" path="res://assets/castle_kit/flag-wide.glb" id="8_jmy6m"]
+[ext_resource type="PackedScene" uid="uid://mo63er52n05f" path="res://assets/castle_kit/flag.glb" id="9_4b1h3"]
+[ext_resource type="PackedScene" uid="uid://b02fodwvljvq1" path="res://assets/castle_kit/gate.glb" id="10_yt45y"]
+[ext_resource type="PackedScene" uid="uid://ducoqxynodsna" path="res://assets/castle_kit/ground-hills.glb" id="11_ocfol"]
+[ext_resource type="PackedScene" uid="uid://cir1ya4g4j1w1" path="res://assets/castle_kit/ground.glb" id="12_c3ype"]
+[ext_resource type="PackedScene" uid="uid://b87pj150dhue0" path="res://assets/castle_kit/metal-gate.glb" id="13_vpg7v"]
+[ext_resource type="PackedScene" uid="uid://baf4ast4tisj7" path="res://assets/castle_kit/rocks-large.glb" id="14_705tp"]
+[ext_resource type="PackedScene" uid="uid://r3vrwuc073ee" path="res://assets/castle_kit/rocks-small.glb" id="15_r3hbt"]
+[ext_resource type="PackedScene" uid="uid://c47d3ax5ipmqp" path="res://assets/castle_kit/siege-ballista-demolished.glb" id="16_8bv15"]
+[ext_resource type="PackedScene" uid="uid://efqrdwy5k8vx" path="res://assets/castle_kit/siege-ballista.glb" id="17_qfl4o"]
+[ext_resource type="PackedScene" uid="uid://bmdp6p2anaq7r" path="res://assets/castle_kit/siege-catapult-demolished.glb" id="18_0r835"]
+[ext_resource type="PackedScene" uid="uid://dpfcwkylw0sae" path="res://assets/castle_kit/siege-catapult.glb" id="19_qipj3"]
+[ext_resource type="PackedScene" uid="uid://cneh5qkrw6ta5" path="res://assets/castle_kit/siege-ram-demolished.glb" id="20_fxdxq"]
+[ext_resource type="PackedScene" uid="uid://283xbvoarthu" path="res://assets/castle_kit/siege-ram.glb" id="21_cgalg"]
+[ext_resource type="PackedScene" uid="uid://bc084x3tj51bf" path="res://assets/castle_kit/siege-tower-demolished.glb" id="22_ywqa2"]
+[ext_resource type="PackedScene" uid="uid://bbptlg5ka6wor" path="res://assets/castle_kit/siege-tower.glb" id="23_x03n0"]
+[ext_resource type="PackedScene" uid="uid://6fr8wo2s66km" path="res://assets/castle_kit/siege-trebuchet-demolished.glb" id="24_yvaxi"]
+[ext_resource type="PackedScene" uid="uid://b6upn22sf86db" path="res://assets/castle_kit/siege-trebuchet.glb" id="25_qsokh"]
+[ext_resource type="PackedScene" uid="uid://cy1f7xm8pdywk" path="res://assets/castle_kit/stairs-stone-square.glb" id="26_6x30v"]
+[ext_resource type="PackedScene" uid="uid://cda68j4e8h8vx" path="res://assets/castle_kit/stairs-stone.glb" id="27_w0806"]
+[ext_resource type="PackedScene" uid="uid://dnpv4uh7tlfy0" path="res://assets/castle_kit/tower-base.glb" id="28_dyqa2"]
+[ext_resource type="PackedScene" uid="uid://b1h1th1htc0vm" path="res://assets/castle_kit/tower-hexagon-base.glb" id="29_7ttqc"]
+[ext_resource type="PackedScene" uid="uid://byxi5dnub7ldv" path="res://assets/castle_kit/tower-hexagon-mid.glb" id="30_bxg8s"]
+[ext_resource type="PackedScene" uid="uid://bfos2ce25d2qm" path="res://assets/castle_kit/tower-hexagon-roof-secondary.glb" id="31_jlk34"]
+[ext_resource type="PackedScene" uid="uid://b21rgajnoiutn" path="res://assets/castle_kit/tower-hexagon-roof.glb" id="32_dv35f"]
+[ext_resource type="PackedScene" uid="uid://bh6dxfxdn3viy" path="res://assets/castle_kit/tower-hexagon-top-wood.glb" id="33_3ax8c"]
+[ext_resource type="PackedScene" uid="uid://cpqeb0ancsaah" path="res://assets/castle_kit/tower-hexagon-top.glb" id="34_vp3w6"]
+[ext_resource type="PackedScene" uid="uid://x0bsiqhwvvmp" path="res://assets/castle_kit/tower-slant-roof.glb" id="35_jslff"]
+[ext_resource type="PackedScene" uid="uid://dndjwq4astmw5" path="res://assets/castle_kit/tower-square-arch.glb" id="36_p2g0a"]
+[ext_resource type="PackedScene" uid="uid://blkushap2xnlu" path="res://assets/castle_kit/tower-square-base-border.glb" id="37_yom8m"]
+[ext_resource type="PackedScene" uid="uid://droc5q4uowj1s" path="res://assets/castle_kit/tower-square-base-color.glb" id="38_dksnf"]
+[ext_resource type="PackedScene" uid="uid://dptw3ut26k3qo" path="res://assets/castle_kit/tower-square-base.glb" id="39_taihv"]
+[ext_resource type="PackedScene" uid="uid://cnooccidmfwt4" path="res://assets/castle_kit/tower-square-mid-color.glb" id="40_3k5mr"]
+[ext_resource type="PackedScene" uid="uid://brukrt57l5h0g" path="res://assets/castle_kit/tower-square-mid-door.glb" id="41_c1lk2"]
+[ext_resource type="PackedScene" uid="uid://dnw80o2rrct2q" path="res://assets/castle_kit/tower-square-mid-open-simple.glb" id="42_vo4pd"]
+[ext_resource type="PackedScene" uid="uid://blnpwuqrttvae" path="res://assets/castle_kit/tower-square-mid-open.glb" id="43_qao6m"]
+[ext_resource type="PackedScene" uid="uid://b0cr2kn8yd3hj" path="res://assets/castle_kit/tower-square-mid-windows.glb" id="44_vni74"]
+[ext_resource type="PackedScene" uid="uid://cdqnx1h821tcr" path="res://assets/castle_kit/tower-square-mid.glb" id="45_70ymn"]
+[ext_resource type="PackedScene" uid="uid://cdq2ixvqmfvqo" path="res://assets/castle_kit/tower-square-roof.glb" id="46_wdpx1"]
+[ext_resource type="PackedScene" uid="uid://djitba2l5rovy" path="res://assets/castle_kit/tower-square-top-color.glb" id="47_jgqis"]
+[ext_resource type="PackedScene" uid="uid://btm6vnmw142sc" path="res://assets/castle_kit/tower-square-top-roof-high-windows.glb" id="48_w284e"]
+[ext_resource type="PackedScene" uid="uid://dwcpn8ruikwvc" path="res://assets/castle_kit/tower-square-top-roof-high.glb" id="49_8mxuj"]
+[ext_resource type="PackedScene" uid="uid://b8essxultro0t" path="res://assets/castle_kit/tower-square-top-roof-rounded.glb" id="50_qxlvm"]
+[ext_resource type="PackedScene" uid="uid://bmhd7f2flmqbx" path="res://assets/castle_kit/tower-square-top-roof.glb" id="51_5l2h7"]
+[ext_resource type="PackedScene" uid="uid://jsv7mv6coab6" path="res://assets/castle_kit/tower-square-top.glb" id="52_8kcdc"]
+[ext_resource type="PackedScene" uid="uid://nwe8igo0tgv6" path="res://assets/castle_kit/tower-square.glb" id="53_o2we4"]
+[ext_resource type="PackedScene" uid="uid://lhkyumlfr5mq" path="res://assets/castle_kit/tower-top.glb" id="54_icx5f"]
+[ext_resource type="PackedScene" uid="uid://bbootmuhefqhx" path="res://assets/castle_kit/tree-large.glb" id="55_etoar"]
+[ext_resource type="PackedScene" uid="uid://bvy26li5ntpyr" path="res://assets/castle_kit/tree-log.glb" id="56_2cf7a"]
+[ext_resource type="PackedScene" uid="uid://cd3n3f0m5bdnx" path="res://assets/castle_kit/tree-small.glb" id="57_m2qqt"]
+[ext_resource type="PackedScene" uid="uid://buljgxwk6fe4l" path="res://assets/castle_kit/tree-trunk.glb" id="58_dh2n8"]
+[ext_resource type="PackedScene" uid="uid://cd0q8dnk6efif" path="res://assets/castle_kit/wall-corner-half-tower.glb" id="59_me0kq"]
+[ext_resource type="PackedScene" uid="uid://dpbq3wi6mybjb" path="res://assets/castle_kit/wall-corner-half.glb" id="60_tbd44"]
+[ext_resource type="PackedScene" uid="uid://rdtc56kkp3wc" path="res://assets/castle_kit/wall-corner-slant.glb" id="61_3333d"]
+[ext_resource type="PackedScene" uid="uid://bu3w12ravkgcr" path="res://assets/castle_kit/wall-corner.glb" id="62_p50nw"]
+[ext_resource type="PackedScene" uid="uid://bew364vb432xl" path="res://assets/castle_kit/wall-doorway.glb" id="63_6p2gc"]
+[ext_resource type="PackedScene" uid="uid://cfml2efy8ucwj" path="res://assets/castle_kit/wall-half-modular.glb" id="64_tyqih"]
+[ext_resource type="PackedScene" uid="uid://u1ut30e23hfj" path="res://assets/castle_kit/wall-half.glb" id="65_lq3xs"]
+[ext_resource type="PackedScene" uid="uid://cil6bbgdowo4b" path="res://assets/castle_kit/wall-narrow-corner.glb" id="66_udh57"]
+[ext_resource type="PackedScene" uid="uid://di2vihgel6vp" path="res://assets/castle_kit/wall-narrow-gate.glb" id="67_0ixeu"]
+[ext_resource type="PackedScene" uid="uid://o7b83kvh3xau" path="res://assets/castle_kit/wall-narrow-stairs-rail.glb" id="68_d3quv"]
+[ext_resource type="PackedScene" uid="uid://ct1m5ji2onr7l" path="res://assets/castle_kit/wall-narrow-stairs.glb" id="69_51ur7"]
+[ext_resource type="PackedScene" uid="uid://tf1mympf5viu" path="res://assets/castle_kit/wall-narrow-wood-fence.glb" id="70_xagbd"]
+[ext_resource type="PackedScene" uid="uid://cl8bvmm6jo8gh" path="res://assets/castle_kit/wall-narrow-wood.glb" id="71_6ash0"]
+[ext_resource type="PackedScene" uid="uid://xu1m6qab6lv2" path="res://assets/castle_kit/wall-narrow.glb" id="72_w4xau"]
+[ext_resource type="PackedScene" uid="uid://cq45eq1nqohsu" path="res://assets/castle_kit/wall-pillar.glb" id="73_vjwos"]
+[ext_resource type="PackedScene" uid="uid://cn5yrxrw6p4ps" path="res://assets/castle_kit/wall-stud.glb" id="74_8itb8"]
+[ext_resource type="PackedScene" uid="uid://bamolpfqyo6f1" path="res://assets/castle_kit/wall-to-narrow.glb" id="75_s4paf"]
+[ext_resource type="PackedScene" uid="uid://05f1ransgxv3" path="res://assets/castle_kit/wall.glb" id="76_ehopv"]
+[ext_resource type="PackedScene" uid="uid://bg8njy2j6etkf" path="res://assets/surival_kit/barrel-open.glb" id="77_7otrs"]
+[ext_resource type="PackedScene" uid="uid://barkdh6ewwkis" path="res://assets/surival_kit/barrel.glb" id="78_fsted"]
+[ext_resource type="PackedScene" uid="uid://cs2gcpdkiktgw" path="res://assets/surival_kit/bedroll-frame.glb" id="79_bpnn7"]
+[ext_resource type="PackedScene" uid="uid://c38gmqkhpemm0" path="res://assets/surival_kit/bedroll-packed.glb" id="80_375qe"]
+[ext_resource type="PackedScene" uid="uid://b8dpx1dcugrrc" path="res://assets/surival_kit/bedroll.glb" id="81_qh0qa"]
+[ext_resource type="PackedScene" uid="uid://f5pp6fmj3kvu" path="res://assets/surival_kit/bottle-large.glb" id="82_3uop7"]
+[ext_resource type="PackedScene" uid="uid://k7foqqkwc1lr" path="res://assets/surival_kit/bottle.glb" id="83_fplj7"]
+[ext_resource type="PackedScene" uid="uid://bntmthyr12u3w" path="res://assets/surival_kit/box-large-open.glb" id="84_nccpe"]
+[ext_resource type="PackedScene" uid="uid://d24plxbb3nxk5" path="res://assets/surival_kit/box-large.glb" id="85_uwrqx"]
+[ext_resource type="PackedScene" uid="uid://cbc1do736nlqu" path="res://assets/surival_kit/box-open.glb" id="86_xp51n"]
+[ext_resource type="PackedScene" uid="uid://e58ajb2xyidp" path="res://assets/surival_kit/box.glb" id="87_6smn3"]
+[ext_resource type="PackedScene" uid="uid://mp0wapuojmvs" path="res://assets/surival_kit/bucket.glb" id="88_d1skg"]
+[ext_resource type="PackedScene" uid="uid://n5xakbc6b1k4" path="res://assets/surival_kit/campfire-fishing-stand.glb" id="89_3q7jo"]
+[ext_resource type="PackedScene" uid="uid://cmyowjimcaesi" path="res://assets/surival_kit/campfire-pit.glb" id="90_i5qjp"]
+[ext_resource type="PackedScene" uid="uid://xlo8wj5i03ng" path="res://assets/surival_kit/campfire-stand.glb" id="91_b2iqf"]
+[ext_resource type="PackedScene" uid="uid://bjla4nb0w2sxc" path="res://assets/surival_kit/chest.glb" id="92_jabes"]
+[ext_resource type="PackedScene" uid="uid://cwnl8wu1xp8tx" path="res://assets/surival_kit/fence-doorway.glb" id="93_uf8at"]
+[ext_resource type="PackedScene" uid="uid://fpwc4l1tsarf" path="res://assets/surival_kit/fence-fortified.glb" id="94_clo6h"]
+[ext_resource type="PackedScene" uid="uid://dlsyll5fk8tc5" path="res://assets/surival_kit/fence.glb" id="95_2iiwn"]
+[ext_resource type="PackedScene" uid="uid://cldrefmoolf5q" path="res://assets/surival_kit/fish-large.glb" id="96_xjx4w"]
+[ext_resource type="PackedScene" uid="uid://dxlxlwtdw7y5g" path="res://assets/surival_kit/fish.glb" id="97_7lb13"]
+[ext_resource type="PackedScene" uid="uid://bttlloj0n6xlw" path="res://assets/surival_kit/floor-hole.glb" id="98_gr4cd"]
+[ext_resource type="PackedScene" uid="uid://1of77ia6gtog" path="res://assets/surival_kit/floor-old.glb" id="99_dnnms"]
+[ext_resource type="PackedScene" uid="uid://bs3vy3vrcpnxo" path="res://assets/surival_kit/floor.glb" id="100_8iwgq"]
+[ext_resource type="PackedScene" uid="uid://bducr4edp6rcr" path="res://assets/surival_kit/grass-large.glb" id="101_vxw4a"]
+[ext_resource type="PackedScene" uid="uid://dhctqypfahjwf" path="res://assets/surival_kit/grass.glb" id="102_udynl"]
+[ext_resource type="PackedScene" uid="uid://ox3drvwt1jle" path="res://assets/surival_kit/metal-panel-narrow.glb" id="103_gdm47"]
+[ext_resource type="PackedScene" uid="uid://barwobf1bidbf" path="res://assets/surival_kit/metal-panel-screws-half.glb" id="104_2hk1s"]
+[ext_resource type="PackedScene" uid="uid://t4uwmttwdqoq" path="res://assets/surival_kit/metal-panel-screws-narrow.glb" id="105_hfxsq"]
+[ext_resource type="PackedScene" uid="uid://b486phwn5h58q" path="res://assets/surival_kit/metal-panel-screws.glb" id="106_o8ivv"]
+[ext_resource type="PackedScene" uid="uid://cybk2amneepw" path="res://assets/surival_kit/metal-panel.glb" id="107_v1mky"]
+[ext_resource type="PackedScene" uid="uid://mwubiydvkibw" path="res://assets/surival_kit/patch-grass-large.glb" id="108_reyjj"]
+[ext_resource type="PackedScene" uid="uid://d1r3120tbjcc4" path="res://assets/surival_kit/patch-grass.glb" id="109_su3g8"]
+[ext_resource type="PackedScene" uid="uid://ciw56r7756pfc" path="res://assets/surival_kit/resource-planks.glb" id="110_ys3y5"]
+[ext_resource type="PackedScene" uid="uid://ousn1qbgw6uf" path="res://assets/surival_kit/resource-stone-large.glb" id="111_ccjsw"]
+[ext_resource type="PackedScene" uid="uid://dhmg0omj0mhlv" path="res://assets/surival_kit/resource-stone.glb" id="112_se48l"]
+[ext_resource type="PackedScene" uid="uid://ceu1krsrwuchm" path="res://assets/surival_kit/resource-wood.glb" id="113_o71ei"]
+[ext_resource type="PackedScene" uid="uid://dk7pda50ve6yw" path="res://assets/surival_kit/rock-a.glb" id="114_mkibf"]
+[ext_resource type="PackedScene" uid="uid://i0sb243jcrfk" path="res://assets/surival_kit/rock-b.glb" id="115_obhd5"]
+[ext_resource type="PackedScene" uid="uid://jbuwujo3e67m" path="res://assets/surival_kit/rock-c.glb" id="116_g48hl"]
+[ext_resource type="PackedScene" uid="uid://cvcedu10od0ja" path="res://assets/surival_kit/rock-flat-grass.glb" id="117_yarj6"]
+[ext_resource type="PackedScene" uid="uid://gl8jpeg65ftj" path="res://assets/surival_kit/rock-flat.glb" id="118_1l8d6"]
+[ext_resource type="PackedScene" uid="uid://df8exv4q45gon" path="res://assets/surival_kit/rock-sand-a.glb" id="119_8f36h"]
+[ext_resource type="PackedScene" uid="uid://dvpf7to8uwqsr" path="res://assets/surival_kit/rock-sand-b.glb" id="120_0eqrk"]
+[ext_resource type="PackedScene" uid="uid://wyhm25xdw1l2" path="res://assets/surival_kit/rock-sand-c.glb" id="121_o8rnv"]
+[ext_resource type="PackedScene" uid="uid://cb3bvddh7erlm" path="res://assets/surival_kit/signpost-single.glb" id="122_yrdli"]
+[ext_resource type="PackedScene" uid="uid://bsuupa0qjloar" path="res://assets/surival_kit/signpost.glb" id="123_ntbgn"]
+[ext_resource type="PackedScene" uid="uid://cxx3l8la7hp1p" path="res://assets/surival_kit/structure-canvas.glb" id="124_ibrvo"]
+[ext_resource type="PackedScene" uid="uid://5ep66f8786ju" path="res://assets/surival_kit/structure-floor.glb" id="125_yf7qb"]
+[ext_resource type="PackedScene" uid="uid://bjwqf6kloho2v" path="res://assets/surival_kit/structure-metal-doorway.glb" id="126_seonn"]
+[ext_resource type="PackedScene" uid="uid://diebvbplpnvn5" path="res://assets/surival_kit/structure-metal-floor.glb" id="127_7g2sm"]
+[ext_resource type="PackedScene" uid="uid://babft2ohu7lyb" path="res://assets/surival_kit/structure-metal-roof.glb" id="128_rvf0q"]
+[ext_resource type="PackedScene" uid="uid://dxded0os7j6w7" path="res://assets/surival_kit/structure-metal-wall.glb" id="129_lpnq6"]
+[ext_resource type="PackedScene" uid="uid://bmd6jnhsm2j5r" path="res://assets/surival_kit/structure-metal.glb" id="130_i031s"]
+[ext_resource type="PackedScene" uid="uid://b8xheqw00rm4h" path="res://assets/surival_kit/structure-roof.glb" id="131_6te8g"]
+[ext_resource type="PackedScene" uid="uid://dlqdnlxr7s44s" path="res://assets/surival_kit/structure.glb" id="132_6f43h"]
+[ext_resource type="PackedScene" uid="uid://cx7yqyqqk8qph" path="res://assets/surival_kit/tent-canvas-half.glb" id="133_2xfk7"]
+[ext_resource type="PackedScene" uid="uid://cjc6nd52kfs5x" path="res://assets/surival_kit/tent-canvas.glb" id="134_0nagi"]
+[ext_resource type="PackedScene" uid="uid://oapcalnqtyl5" path="res://assets/surival_kit/tent.glb" id="135_bxjo4"]
+[ext_resource type="PackedScene" uid="uid://cgo0usa11sixi" path="res://assets/surival_kit/tool-axe-upgraded.glb" id="136_0vo82"]
+[ext_resource type="PackedScene" uid="uid://basfwdgsetsbn" path="res://assets/surival_kit/tool-axe.glb" id="137_y1tcr"]
+[ext_resource type="PackedScene" uid="uid://bb5q8dmtgdqjx" path="res://assets/surival_kit/tool-hammer-upgraded.glb" id="138_dyvld"]
+[ext_resource type="PackedScene" uid="uid://d14j08xmepltq" path="res://assets/surival_kit/tool-hammer.glb" id="139_v4jei"]
+[ext_resource type="PackedScene" uid="uid://dkg604hitulpw" path="res://assets/surival_kit/tool-hoe-upgraded.glb" id="140_jdb47"]
+[ext_resource type="PackedScene" uid="uid://r4jlyagymnqt" path="res://assets/surival_kit/tool-hoe.glb" id="141_6lhmu"]
+[ext_resource type="PackedScene" uid="uid://b0akip2tc8p4y" path="res://assets/surival_kit/tool-pickaxe-upgraded.glb" id="142_habnd"]
+[ext_resource type="PackedScene" uid="uid://pmyyr586uja8" path="res://assets/surival_kit/tool-pickaxe.glb" id="143_0in2r"]
+[ext_resource type="PackedScene" uid="uid://benrsual00nmm" path="res://assets/surival_kit/tool-shovel-upgraded.glb" id="144_ntcin"]
+[ext_resource type="PackedScene" uid="uid://c2bfndeequh3c" path="res://assets/surival_kit/tool-shovel.glb" id="145_nyjbh"]
+[ext_resource type="PackedScene" uid="uid://bp715brxu8kd2" path="res://assets/surival_kit/tree-autumn-tall.glb" id="146_rf2ia"]
+[ext_resource type="PackedScene" uid="uid://cc37pqvplntvj" path="res://assets/surival_kit/tree-autumn-trunk.glb" id="147_pwa2q"]
+[ext_resource type="PackedScene" uid="uid://bqtma2p5k4ui2" path="res://assets/surival_kit/tree-autumn.glb" id="148_usu1m"]
+[ext_resource type="PackedScene" uid="uid://blal78af021do" path="res://assets/surival_kit/tree-log-small.glb" id="149_sq77x"]
+[ext_resource type="PackedScene" uid="uid://baxkbskelvjnn" path="res://assets/surival_kit/tree-log.glb" id="150_nqp2q"]
+[ext_resource type="PackedScene" uid="uid://sgc8ioy3uq1m" path="res://assets/surival_kit/tree-tall.glb" id="151_k4oe6"]
+[ext_resource type="PackedScene" uid="uid://5511vf6qao1q" path="res://assets/surival_kit/tree-trunk.glb" id="152_kwoio"]
+[ext_resource type="PackedScene" uid="uid://dgytld541w44d" path="res://assets/surival_kit/tree.glb" id="153_dbbbe"]
+[ext_resource type="PackedScene" uid="uid://cfy1fxot6rel0" path="res://assets/surival_kit/workbench-anvil.glb" id="154_rd7iu"]
+[ext_resource type="PackedScene" uid="uid://dirpnnbpu6bkh" path="res://assets/surival_kit/workbench-grind.glb" id="155_ajxw6"]
+[ext_resource type="PackedScene" uid="uid://de42g28ge5mr7" path="res://assets/surival_kit/workbench.glb" id="156_nf5jq"]
+[ext_resource type="PackedScene" uid="uid://by2iod0hvdwbr" path="res://assets/pirate_kit/barrel.glb" id="157_lijmy"]
+[ext_resource type="PackedScene" uid="uid://dsi4fqhb2vep8" path="res://assets/pirate_kit/boat-row-large.glb" id="158_41hvy"]
+[ext_resource type="PackedScene" uid="uid://d0f7pnrrati3y" path="res://assets/pirate_kit/boat-row-small.glb" id="159_oftnc"]
+[ext_resource type="PackedScene" uid="uid://dnyl1c7epfr1v" path="res://assets/pirate_kit/bottle-large.glb" id="160_huiwq"]
+[ext_resource type="PackedScene" uid="uid://bfyhowcn6pvic" path="res://assets/pirate_kit/bottle.glb" id="161_enbd5"]
+[ext_resource type="PackedScene" uid="uid://cr7ub7fgddf11" path="res://assets/pirate_kit/cannon-ball.glb" id="162_t8kse"]
+[ext_resource type="PackedScene" uid="uid://c5itqfr6u3ywu" path="res://assets/pirate_kit/cannon-mobile.glb" id="163_w3um7"]
+[ext_resource type="PackedScene" uid="uid://bd17jtmopn2gx" path="res://assets/pirate_kit/cannon.glb" id="164_4op0q"]
+[ext_resource type="PackedScene" uid="uid://2rn6lfvcngyx" path="res://assets/pirate_kit/chest.glb" id="165_yxe1r"]
+[ext_resource type="PackedScene" uid="uid://0mupfwgsp83h" path="res://assets/pirate_kit/crate-bottles.glb" id="166_ttsba"]
+[ext_resource type="PackedScene" uid="uid://rykp8j1mav3t" path="res://assets/pirate_kit/crate.glb" id="167_0wugw"]
+[ext_resource type="PackedScene" uid="uid://b8mnt521m32ts" path="res://assets/pirate_kit/flag-high-pennant.glb" id="168_oftlp"]
+[ext_resource type="PackedScene" uid="uid://denh3cnuae6t7" path="res://assets/pirate_kit/flag-high.glb" id="169_xcj4n"]
+[ext_resource type="PackedScene" uid="uid://bg08spf1kna7f" path="res://assets/pirate_kit/flag-pennant.glb" id="170_uw0a2"]
+[ext_resource type="PackedScene" uid="uid://bx1fy0igyyiry" path="res://assets/pirate_kit/flag-pirate-high-pennant.glb" id="171_oug4i"]
+[ext_resource type="PackedScene" uid="uid://0xfj8psub17f" path="res://assets/pirate_kit/flag-pirate-high.glb" id="172_w2ei5"]
+[ext_resource type="PackedScene" uid="uid://dce8084crpts3" path="res://assets/pirate_kit/flag-pirate-pennant.glb" id="173_rivaa"]
+[ext_resource type="PackedScene" uid="uid://b8y76obga6rrb" path="res://assets/pirate_kit/flag-pirate.glb" id="174_6upmn"]
+[ext_resource type="PackedScene" uid="uid://vwki0po0jtk1" path="res://assets/pirate_kit/flag.glb" id="175_47m2w"]
+[ext_resource type="PackedScene" uid="uid://2q1nfnv7ccdb" path="res://assets/pirate_kit/grass-patch.glb" id="176_3mur1"]
+[ext_resource type="PackedScene" uid="uid://dyy61ajspatpk" path="res://assets/pirate_kit/grass-plant.glb" id="177_1dpl2"]
+[ext_resource type="PackedScene" uid="uid://dx3u4ij5ct7ci" path="res://assets/pirate_kit/grass.glb" id="178_rg4np"]
+[ext_resource type="PackedScene" uid="uid://bx2svtuaftyhl" path="res://assets/pirate_kit/hole.glb" id="179_oc8lu"]
+[ext_resource type="PackedScene" uid="uid://cn2njip6r1lhs" path="res://assets/pirate_kit/palm-bend.glb" id="180_sngcn"]
+[ext_resource type="PackedScene" uid="uid://b88wdooeyb8so" path="res://assets/pirate_kit/palm-detailed-bend.glb" id="181_5c8r2"]
+[ext_resource type="PackedScene" uid="uid://ci1wlgwskti26" path="res://assets/pirate_kit/palm-detailed-straight.glb" id="182_5555o"]
+[ext_resource type="PackedScene" uid="uid://c1frl02rpj4x3" path="res://assets/pirate_kit/palm-straight.glb" id="183_ryes5"]
+[ext_resource type="PackedScene" uid="uid://c4j5b1bdkscyy" path="res://assets/pirate_kit/rocks-a.glb" id="190_glvf3"]
+[ext_resource type="PackedScene" uid="uid://n013o63ovk14" path="res://assets/pirate_kit/rocks-b.glb" id="191_40iwp"]
+[ext_resource type="PackedScene" uid="uid://bd1lljlml3xi4" path="res://assets/pirate_kit/rocks-c.glb" id="192_xxl8x"]
+[ext_resource type="PackedScene" uid="uid://cooafqfrfrcky" path="res://assets/pirate_kit/rocks-sand-a.glb" id="193_wlwxr"]
+[ext_resource type="PackedScene" uid="uid://qscjdt4fxuls" path="res://assets/pirate_kit/rocks-sand-b.glb" id="194_vlpm0"]
+[ext_resource type="PackedScene" uid="uid://hpuj1f0kepoq" path="res://assets/pirate_kit/rocks-sand-c.glb" id="195_3ga2u"]
+[ext_resource type="PackedScene" uid="uid://4bw2u7e1jqpg" path="res://assets/pirate_kit/ship-ghost.glb" id="196_fwvb6"]
+[ext_resource type="PackedScene" uid="uid://dls1huew5keh4" path="res://assets/pirate_kit/ship-large.glb" id="197_blbyh"]
+[ext_resource type="PackedScene" uid="uid://cyetgq7v25ah6" path="res://assets/pirate_kit/ship-medium.glb" id="198_qnabu"]
+[ext_resource type="PackedScene" uid="uid://dfq1pck0faqvj" path="res://assets/pirate_kit/ship-pirate-large.glb" id="199_kyhm5"]
+[ext_resource type="PackedScene" uid="uid://bngl0c2o6jfg1" path="res://assets/pirate_kit/ship-pirate-medium.glb" id="200_v7vrc"]
+[ext_resource type="PackedScene" uid="uid://bn4j6yf0f4eqi" path="res://assets/pirate_kit/ship-pirate-small.glb" id="201_7ult8"]
+[ext_resource type="PackedScene" uid="uid://bokl6tuh1icod" path="res://assets/pirate_kit/ship-small.glb" id="202_rtmjk"]
+[ext_resource type="PackedScene" uid="uid://bptxkdf10by2" path="res://assets/pirate_kit/ship-wreck.glb" id="203_2buea"]
+[ext_resource type="PackedScene" uid="uid://c0ml0wxerdyoq" path="res://assets/pirate_kit/structure-fence-sides.glb" id="204_s4k35"]
+[ext_resource type="PackedScene" uid="uid://bgn5i3eg333eo" path="res://assets/pirate_kit/structure-fence.glb" id="205_m5tlt"]
+[ext_resource type="PackedScene" uid="uid://dfeyo3vaestpj" path="res://assets/pirate_kit/structure-platform-dock-small.glb" id="206_743gr"]
+[ext_resource type="PackedScene" uid="uid://h0ofuhv3m0te" path="res://assets/pirate_kit/structure-platform-dock.glb" id="207_0v1p2"]
+[ext_resource type="PackedScene" uid="uid://drjn5eudn2ffk" path="res://assets/pirate_kit/structure-platform-small.glb" id="208_0utl7"]
+[ext_resource type="PackedScene" uid="uid://duuvkt7pfctcu" path="res://assets/pirate_kit/structure-platform.glb" id="209_v2rf5"]
+[ext_resource type="PackedScene" uid="uid://dk2w26oj0nl00" path="res://assets/pirate_kit/structure-roof.glb" id="210_l8wn8"]
+[ext_resource type="PackedScene" uid="uid://dalh02dkk4qj7" path="res://assets/pirate_kit/structure.glb" id="211_vbthv"]
+[ext_resource type="PackedScene" uid="uid://dbklebenshebe" path="res://assets/pirate_kit/tool-paddle.glb" id="212_h05u4"]
+[ext_resource type="PackedScene" uid="uid://dcg6trt0fba7i" path="res://assets/pirate_kit/tool-shovel.glb" id="213_r0fmx"]
+[ext_resource type="PackedScene" uid="uid://dxhdd1k17s0ia" path="res://assets/pirate_kit/tower-base-door.glb" id="214_dcv0c"]
+[ext_resource type="PackedScene" uid="uid://bg68au2rrto0u" path="res://assets/pirate_kit/tower-base.glb" id="215_mmwfy"]
+[ext_resource type="PackedScene" uid="uid://estydnlp35rq" path="res://assets/pirate_kit/tower-complete-large.glb" id="216_8m8op"]
+[ext_resource type="PackedScene" uid="uid://b5svsapmvnilg" path="res://assets/pirate_kit/tower-complete-small.glb" id="217_y3kno"]
+[ext_resource type="PackedScene" uid="uid://com8xa7k7l6ya" path="res://assets/pirate_kit/tower-middle-windows.glb" id="218_4ih5n"]
+[ext_resource type="PackedScene" uid="uid://cn7uwki3h6nmp" path="res://assets/pirate_kit/tower-middle.glb" id="219_cnqsi"]
+[ext_resource type="PackedScene" uid="uid://ckug541mqijta" path="res://assets/pirate_kit/tower-roof.glb" id="220_o7r7x"]
+[ext_resource type="PackedScene" uid="uid://bw6fvfy2uaw1e" path="res://assets/pirate_kit/tower-top.glb" id="221_4ah1g"]
+[ext_resource type="PackedScene" uid="uid://cum1mv4u1qtgv" path="res://assets/pirate_kit/tower-watch.glb" id="222_xl16y"]
+[ext_resource type="PackedScene" uid="uid://b1tsjj8myor7m" path="res://assets/arena_kit/banner.glb" id="223_hvshd"]
+[ext_resource type="PackedScene" uid="uid://c5dijmahv4ptx" path="res://assets/arena_kit/bricks.glb" id="224_u0qus"]
+[ext_resource type="PackedScene" uid="uid://j6ac8vjha2b2" path="res://assets/arena_kit/character-soldier.glb" id="225_u6k62"]
+[ext_resource type="PackedScene" uid="uid://gnicqxresgyo" path="res://assets/arena_kit/column-damaged.glb" id="226_sssfk"]
+[ext_resource type="PackedScene" uid="uid://25hg7b5ohjav" path="res://assets/arena_kit/column.glb" id="227_em2wl"]
+[ext_resource type="PackedScene" uid="uid://bl7of003r5hs4" path="res://assets/arena_kit/statue.glb" id="228_brbyr"]
+[ext_resource type="PackedScene" uid="uid://c46pjn0w4m1b" path="res://assets/arena_kit/tree.glb" id="229_qn3pq"]
+[ext_resource type="PackedScene" uid="uid://rlfl0u1bgh37" path="res://assets/arena_kit/trophy.glb" id="230_rjt5j"]
+[ext_resource type="PackedScene" uid="uid://d7xm1chb1s4" path="res://assets/arena_kit/weapon-rack.glb" id="231_buhdd"]
+[ext_resource type="PackedScene" uid="uid://ckogydndni270" path="res://assets/arena_kit/weapon-spear.glb" id="232_lcd3w"]
+[ext_resource type="PackedScene" uid="uid://6yp6pkncqcbt" path="res://assets/arena_kit/weapon-sword.glb" id="233_0fnnh"]
+[ext_resource type="PackedScene" uid="uid://bdesi0ss77gm3" path="res://assets/grid1_meshes/spike-block-wide.glb" id="234_wwpbj"]
+[ext_resource type="PackedScene" uid="uid://cbpp456u3tew1" path="res://assets/grid1_meshes/spike-block.glb" id="235_nkep1"]
+[ext_resource type="PackedScene" uid="uid://tdhqkb68dv3m" path="res://assets/grid1_meshes/stones.glb" id="236_8bghp"]
+[ext_resource type="PackedScene" uid="uid://bpjnwg8aekc1c" path="res://assets/grid1_meshes/trap-spikes-large.glb" id="237_wg41r"]
+[ext_resource type="PackedScene" uid="uid://cmh4nk1b1bwv4" path="res://assets/grid1_meshes/trap-spikes.glb" id="238_cfe4a"]
+[ext_resource type="PackedScene" uid="uid://cxawrtkjoi7x1" path="res://assets/grid1_meshes/tree-pine-small.glb" id="239_p55yk"]
+[ext_resource type="PackedScene" uid="uid://ksnjv5maw8so" path="res://assets/grid1_meshes/tree-pine-snow-small.glb" id="240_wo8wn"]
+[ext_resource type="PackedScene" uid="uid://cwmamh2080tgn" path="res://assets/grid1_meshes/tree-pine-snow.glb" id="241_io1dn"]
+[ext_resource type="PackedScene" uid="uid://ge6ba52itn2l" path="res://assets/grid1_meshes/tree-pine.glb" id="242_k6yun"]
+[ext_resource type="PackedScene" uid="uid://3lymru7tfh7v" path="res://assets/grid1_meshes/tree-snow.glb" id="243_gf7io"]
+[ext_resource type="PackedScene" uid="uid://6wewp835hjxp" path="res://assets/grid1_meshes/tree.glb" id="244_1aw0y"]
+[ext_resource type="PackedScene" uid="uid://drkcrdgri4iec" path="res://assets/grid1_meshes/sign.glb" id="245_k6pcc"]
+[ext_resource type="PackedScene" uid="uid://bvx6jh5mseak" path="res://assets/grid1_meshes/heart.glb" id="246_c58wb"]
+[ext_resource type="PackedScene" uid="uid://dm6iw07ughg6f" path="res://assets/grid1_meshes/jewel.glb" id="247_fus8u"]
+[ext_resource type="PackedScene" uid="uid://blfvem1xmc18v" path="res://assets/grid1_meshes/key.glb" id="248_bhdo6"]
+[ext_resource type="PackedScene" uid="uid://d3xwpteelxqar" path="res://assets/grid1_meshes/lever.glb" id="249_fy16a"]
+[ext_resource type="PackedScene" uid="uid://cw5evyloectkr" path="res://assets/grid1_meshes/lock.glb" id="250_50fj4"]
+[ext_resource type="PackedScene" uid="uid://cry6y0vlipijs" path="res://assets/grid1_meshes/mushrooms.glb" id="251_6eh6p"]
+[ext_resource type="PackedScene" uid="uid://yxinhgwq3frp" path="res://assets/grid1_meshes/poles.glb" id="252_uxcbu"]
+[ext_resource type="PackedScene" uid="uid://jm6uqpt8l75b" path="res://assets/grid1_meshes/plant.glb" id="253_bo6qa"]
+[ext_resource type="PackedScene" uid="uid://2020ie6mqvva" path="res://assets/grid1_meshes/bomb.glb" id="254_0qewq"]
+[ext_resource type="PackedScene" uid="uid://cwq50guqrohc2" path="res://assets/grid1_meshes/button-round.glb" id="255_fawlr"]
+[ext_resource type="PackedScene" uid="uid://jkw7x7kugvbs" path="res://assets/grid1_meshes/button-square.glb" id="256_jnrro"]
+[ext_resource type="PackedScene" uid="uid://cl8xlw3wg8yoc" path="res://assets/grid1_meshes/rocks.glb" id="257_3am8g"]
+[ext_resource type="PackedScene" uid="uid://c5meoub1vjlub" path="res://assets/grid1_meshes/flag.glb" id="258_habk7"]
+[ext_resource type="PackedScene" uid="uid://buoja7qnpuomv" path="res://assets/grid1_meshes/arrow.glb" id="258_oxhth"]
+[ext_resource type="PackedScene" uid="uid://c5ssope0fua8m" path="res://assets/grid1_meshes/flowers-tall.glb" id="259_kx3kx"]
+[ext_resource type="PackedScene" uid="uid://d0quj4l43r46x" path="res://assets/grid1_meshes/arrows.glb" id="259_xohvm"]
+[ext_resource type="PackedScene" uid="uid://d2gdhn1hr8u6p" path="res://assets/grid1_meshes/flowers.glb" id="260_5jkaq"]
+[ext_resource type="PackedScene" uid="uid://bjexvy4amrofi" path="res://assets/grid1_meshes/barrel.glb" id="260_ngckh"]
+[ext_resource type="PackedScene" uid="uid://c42j21h87dg2r" path="res://assets/grid1_meshes/chest.glb" id="261_gb46j"]
+[ext_resource type="PackedScene" uid="uid://71at5wyxk3r4" path="res://assets/grid1_meshes/ladder-broken.glb" id="261_sysua"]
+[ext_resource type="PackedScene" uid="uid://dpn7fuvh6rs3g" path="res://assets/grid1_meshes/ladder-long.glb" id="262_ktnwo"]
+[ext_resource type="PackedScene" uid="uid://ci10dva6rm0ar" path="res://assets/grid1_meshes/coin-bronze.glb" id="262_yc4ge"]
+[ext_resource type="PackedScene" uid="uid://dl5vefawwpyej" path="res://assets/grid1_meshes/coin-gold.glb" id="263_6h6m4"]
+[ext_resource type="PackedScene" uid="uid://c4figdhkfhkbl" path="res://assets/grid1_meshes/ladder.glb" id="263_aayk8"]
+[ext_resource type="PackedScene" uid="uid://bl40hmplpvenp" path="res://assets/grid1_meshes/coin-silver.glb" id="264_d0l40"]
+[ext_resource type="PackedScene" uid="uid://ba7anor3n6lhm" path="res://assets/grid1_meshes/crate-item-strong.glb" id="265_8omr8"]
+[ext_resource type="PackedScene" uid="uid://b1pu1v4i83c35" path="res://assets/grid1_meshes/crate-item.glb" id="266_4r678"]
+[ext_resource type="PackedScene" uid="uid://c737wawfgc5dl" path="res://assets/grid1_meshes/crate-strong.glb" id="267_77k7w"]
+[ext_resource type="PackedScene" uid="uid://c02cbljgf5ka6" path="res://assets/grid1_meshes/crate.glb" id="268_pg1ut"]
+[ext_resource type="PackedScene" uid="uid://bt3wn3h5tjsmi" path="res://assets/grid1_meshes/door-large-open.glb" id="269_cno3k"]
+[ext_resource type="PackedScene" uid="uid://72nptt7ungim" path="res://assets/grid1_meshes/door-open.glb" id="270_0eqnx"]
+[ext_resource type="PackedScene" uid="uid://5xo82c0loy33" path="res://assets/grid1_meshes/door-rotate-large.glb" id="271_ulc1a"]
+[ext_resource type="PackedScene" uid="uid://briaoxkx7onch" path="res://assets/grid1_meshes/door-rotate.glb" id="272_nji1o"]
+[ext_resource type="PackedScene" uid="uid://chkgloc88j66l" path="res://assets/grid1_meshes/fence-broken.glb" id="273_alk53"]
+[ext_resource type="PackedScene" uid="uid://befxc2vw8mhqj" path="res://assets/grid1_meshes/fence-corner-curved.glb" id="274_rtxqs"]
+[ext_resource type="PackedScene" uid="uid://cxlxg1hwyi0ye" path="res://assets/grid1_meshes/fence-corner.glb" id="275_iq8ta"]
+[ext_resource type="PackedScene" uid="uid://7exiiibrf2hq" path="res://assets/grid1_meshes/fence-low-broken.glb" id="276_04fhu"]
+[ext_resource type="PackedScene" uid="uid://sjqgga0r4jcm" path="res://assets/grid1_meshes/fence-low-corner-curved.glb" id="277_rnekd"]
+[ext_resource type="PackedScene" uid="uid://b011qei6rc6r4" path="res://assets/grid1_meshes/fence-low-corner.glb" id="278_agwpv"]
+[ext_resource type="PackedScene" uid="uid://0edw8ji6544q" path="res://assets/grid1_meshes/fence-low-straight.glb" id="279_ukpxl"]
+[ext_resource type="PackedScene" uid="uid://dv3m1vru10ngq" path="res://assets/grid1_meshes/fence-straight.glb" id="280_2nuxx"]
+[ext_resource type="PackedScene" uid="uid://cgkxa1nid0qo4" path="res://assets/grid1_meshes/saw.glb" id="281_b656s"]
+[ext_resource type="PackedScene" uid="uid://b6ekq6u0gcnue" path="res://assets/grid1_meshes/grass.glb" id="282_kd17i"]
+[ext_resource type="PackedScene" uid="uid://d2wmutx6mt53u" path="res://assets/arena_kit/wall-corner.glb" id="283_6p58p"]
+[ext_resource type="PackedScene" uid="uid://3ho5ri6tdibk" path="res://assets/arena_kit/wall-gate.glb" id="284_qd5fw"]
+[ext_resource type="PackedScene" uid="uid://cxd520vcn5qon" path="res://assets/arena_kit/wall.glb" id="285_byjme"]
+
+[node name="CastleKitLib" type="Node3D"]
+
+[node name="bridge-draw2" parent="." instance=ExtResource("1_82kxw")]
+
+[node name="bridge-straight-pillar2" parent="." instance=ExtResource("2_yt07c")]
+
+[node name="bridge-straight2" parent="." instance=ExtResource("3_5rs0f")]
+
+[node name="door2" parent="." instance=ExtResource("4_k6fhy")]
+
+[node name="flag-banner-long2" parent="." instance=ExtResource("5_ex8nf")]
+
+[node name="flag-banner-short2" parent="." instance=ExtResource("6_mia4r")]
+
+[node name="flag-pennant2" parent="." instance=ExtResource("7_dc723")]
+
+[node name="flag-wide2" parent="." instance=ExtResource("8_jmy6m")]
+
+[node name="flag2" parent="." instance=ExtResource("9_4b1h3")]
+
+[node name="gate2" parent="." instance=ExtResource("10_yt45y")]
+
+[node name="ground-hills2" parent="." instance=ExtResource("11_ocfol")]
+
+[node name="ground2" parent="." instance=ExtResource("12_c3ype")]
+
+[node name="metal-gate2" parent="." instance=ExtResource("13_vpg7v")]
+
+[node name="rocks-large2" parent="." instance=ExtResource("14_705tp")]
+
+[node name="rocks-small2" parent="." instance=ExtResource("15_r3hbt")]
+
+[node name="siege-ballista-demolished2" parent="." instance=ExtResource("16_8bv15")]
+
+[node name="siege-ballista2" parent="." instance=ExtResource("17_qfl4o")]
+
+[node name="siege-catapult-demolished2" parent="." instance=ExtResource("18_0r835")]
+
+[node name="siege-catapult2" parent="." instance=ExtResource("19_qipj3")]
+
+[node name="siege-ram-demolished2" parent="." instance=ExtResource("20_fxdxq")]
+
+[node name="siege-ram2" parent="." instance=ExtResource("21_cgalg")]
+
+[node name="siege-tower-demolished2" parent="." instance=ExtResource("22_ywqa2")]
+
+[node name="siege-tower2" parent="." instance=ExtResource("23_x03n0")]
+
+[node name="siege-trebuchet-demolished2" parent="." instance=ExtResource("24_yvaxi")]
+
+[node name="siege-trebuchet2" parent="." instance=ExtResource("25_qsokh")]
+
+[node name="stairs-stone-square2" parent="." instance=ExtResource("26_6x30v")]
+
+[node name="stairs-stone2" parent="." instance=ExtResource("27_w0806")]
+
+[node name="tower-base2" parent="." instance=ExtResource("28_dyqa2")]
+
+[node name="tower-hexagon-base2" parent="." instance=ExtResource("29_7ttqc")]
+
+[node name="tower-hexagon-mid2" parent="." instance=ExtResource("30_bxg8s")]
+
+[node name="tower-hexagon-roof-secondary2" parent="." instance=ExtResource("31_jlk34")]
+
+[node name="tower-hexagon-roof2" parent="." instance=ExtResource("32_dv35f")]
+
+[node name="tower-hexagon-top-wood2" parent="." instance=ExtResource("33_3ax8c")]
+
+[node name="tower-hexagon-top2" parent="." instance=ExtResource("34_vp3w6")]
+
+[node name="tower-slant-roof2" parent="." instance=ExtResource("35_jslff")]
+
+[node name="tower-square-arch2" parent="." instance=ExtResource("36_p2g0a")]
+
+[node name="tower-square-base-border2" parent="." instance=ExtResource("37_yom8m")]
+
+[node name="tower-square-base-color2" parent="." instance=ExtResource("38_dksnf")]
+
+[node name="tower-square-base2" parent="." instance=ExtResource("39_taihv")]
+
+[node name="tower-square-mid-color2" parent="." instance=ExtResource("40_3k5mr")]
+
+[node name="tower-square-mid-door2" parent="." instance=ExtResource("41_c1lk2")]
+
+[node name="tower-square-mid-open-simple2" parent="." instance=ExtResource("42_vo4pd")]
+
+[node name="tower-square-mid-open2" parent="." instance=ExtResource("43_qao6m")]
+
+[node name="tower-square-mid-windows2" parent="." instance=ExtResource("44_vni74")]
+
+[node name="tower-square-mid2" parent="." instance=ExtResource("45_70ymn")]
+
+[node name="tower-square-roof2" parent="." instance=ExtResource("46_wdpx1")]
+
+[node name="tower-square-top-color2" parent="." instance=ExtResource("47_jgqis")]
+
+[node name="tower-square-top-roof-high-windows2" parent="." instance=ExtResource("48_w284e")]
+
+[node name="tower-square-top-roof-high2" parent="." instance=ExtResource("49_8mxuj")]
+
+[node name="tower-square-top-roof-rounded2" parent="." instance=ExtResource("50_qxlvm")]
+
+[node name="tower-square-top-roof2" parent="." instance=ExtResource("51_5l2h7")]
+
+[node name="tower-square-top2" parent="." instance=ExtResource("52_8kcdc")]
+
+[node name="tower-square2" parent="." instance=ExtResource("53_o2we4")]
+
+[node name="tower-top2" parent="." instance=ExtResource("54_icx5f")]
+
+[node name="tree-large2" parent="." instance=ExtResource("55_etoar")]
+
+[node name="tree-log2" parent="." instance=ExtResource("56_2cf7a")]
+
+[node name="tree-small2" parent="." instance=ExtResource("57_m2qqt")]
+
+[node name="tree-trunk2" parent="." instance=ExtResource("58_dh2n8")]
+
+[node name="wall-corner-half-tower2" parent="." instance=ExtResource("59_me0kq")]
+
+[node name="wall-corner-half2" parent="." instance=ExtResource("60_tbd44")]
+
+[node name="wall-corner-slant2" parent="." instance=ExtResource("61_3333d")]
+
+[node name="wall-corner2" parent="." instance=ExtResource("62_p50nw")]
+
+[node name="wall-doorway2" parent="." instance=ExtResource("63_6p2gc")]
+
+[node name="wall-half-modular2" parent="." instance=ExtResource("64_tyqih")]
+
+[node name="wall-half2" parent="." instance=ExtResource("65_lq3xs")]
+
+[node name="wall-narrow-corner2" parent="." instance=ExtResource("66_udh57")]
+
+[node name="wall-narrow-gate2" parent="." instance=ExtResource("67_0ixeu")]
+
+[node name="wall-narrow-stairs-rail2" parent="." instance=ExtResource("68_d3quv")]
+
+[node name="wall-narrow-stairs2" parent="." instance=ExtResource("69_51ur7")]
+
+[node name="wall-narrow-wood-fence2" parent="." instance=ExtResource("70_xagbd")]
+
+[node name="wall-narrow-wood2" parent="." instance=ExtResource("71_6ash0")]
+
+[node name="wall-narrow2" parent="." instance=ExtResource("72_w4xau")]
+
+[node name="wall-pillar2" parent="." instance=ExtResource("73_vjwos")]
+
+[node name="wall-stud2" parent="." instance=ExtResource("74_8itb8")]
+
+[node name="wall-to-narrow2" parent="." instance=ExtResource("75_s4paf")]
+
+[node name="wall2" parent="." instance=ExtResource("76_ehopv")]
+
+[node name="barrel-open2" parent="." instance=ExtResource("77_7otrs")]
+
+[node name="barrel2" parent="." instance=ExtResource("78_fsted")]
+
+[node name="bedroll-frame2" parent="." instance=ExtResource("79_bpnn7")]
+
+[node name="bedroll-packed2" parent="." instance=ExtResource("80_375qe")]
+
+[node name="bedroll2" parent="." instance=ExtResource("81_qh0qa")]
+
+[node name="bottle-large2" parent="." instance=ExtResource("82_3uop7")]
+
+[node name="bottle2" parent="." instance=ExtResource("83_fplj7")]
+
+[node name="box-large-open2" parent="." instance=ExtResource("84_nccpe")]
+
+[node name="box-large2" parent="." instance=ExtResource("85_uwrqx")]
+
+[node name="box-open2" parent="." instance=ExtResource("86_xp51n")]
+
+[node name="box2" parent="." instance=ExtResource("87_6smn3")]
+
+[node name="bucket2" parent="." instance=ExtResource("88_d1skg")]
+
+[node name="campfire-fishing-stand2" parent="." instance=ExtResource("89_3q7jo")]
+
+[node name="campfire-pit2" parent="." instance=ExtResource("90_i5qjp")]
+
+[node name="campfire-stand2" parent="." instance=ExtResource("91_b2iqf")]
+
+[node name="chest2" parent="." instance=ExtResource("92_jabes")]
+
+[node name="fence-doorway2" parent="." instance=ExtResource("93_uf8at")]
+
+[node name="fence-fortified2" parent="." instance=ExtResource("94_clo6h")]
+
+[node name="fence2" parent="." instance=ExtResource("95_2iiwn")]
+
+[node name="fish-large2" parent="." instance=ExtResource("96_xjx4w")]
+
+[node name="fish2" parent="." instance=ExtResource("97_7lb13")]
+
+[node name="floor-hole2" parent="." instance=ExtResource("98_gr4cd")]
+
+[node name="floor-old2" parent="." instance=ExtResource("99_dnnms")]
+
+[node name="floor2" parent="." instance=ExtResource("100_8iwgq")]
+
+[node name="grass-large2" parent="." instance=ExtResource("101_vxw4a")]
+
+[node name="grass2" parent="." instance=ExtResource("102_udynl")]
+
+[node name="metal-panel-narrow2" parent="." instance=ExtResource("103_gdm47")]
+
+[node name="metal-panel-screws-half2" parent="." instance=ExtResource("104_2hk1s")]
+
+[node name="metal-panel-screws-narrow2" parent="." instance=ExtResource("105_hfxsq")]
+
+[node name="metal-panel-screws2" parent="." instance=ExtResource("106_o8ivv")]
+
+[node name="metal-panel2" parent="." instance=ExtResource("107_v1mky")]
+
+[node name="patch-grass-large2" parent="." instance=ExtResource("108_reyjj")]
+
+[node name="patch-grass2" parent="." instance=ExtResource("109_su3g8")]
+
+[node name="resource-planks2" parent="." instance=ExtResource("110_ys3y5")]
+
+[node name="resource-stone-large2" parent="." instance=ExtResource("111_ccjsw")]
+
+[node name="resource-stone2" parent="." instance=ExtResource("112_se48l")]
+
+[node name="resource-wood2" parent="." instance=ExtResource("113_o71ei")]
+
+[node name="rock-a2" parent="." instance=ExtResource("114_mkibf")]
+
+[node name="rock-b2" parent="." instance=ExtResource("115_obhd5")]
+
+[node name="rock-c2" parent="." instance=ExtResource("116_g48hl")]
+
+[node name="rock-flat-grass2" parent="." instance=ExtResource("117_yarj6")]
+
+[node name="rock-flat2" parent="." instance=ExtResource("118_1l8d6")]
+
+[node name="rock-sand-a2" parent="." instance=ExtResource("119_8f36h")]
+
+[node name="rock-sand-b2" parent="." instance=ExtResource("120_0eqrk")]
+
+[node name="rock-sand-c2" parent="." instance=ExtResource("121_o8rnv")]
+
+[node name="signpost-single2" parent="." instance=ExtResource("122_yrdli")]
+
+[node name="signpost2" parent="." instance=ExtResource("123_ntbgn")]
+
+[node name="structure-canvas2" parent="." instance=ExtResource("124_ibrvo")]
+
+[node name="structure-floor2" parent="." instance=ExtResource("125_yf7qb")]
+
+[node name="structure-metal-doorway2" parent="." instance=ExtResource("126_seonn")]
+
+[node name="structure-metal-floor2" parent="." instance=ExtResource("127_7g2sm")]
+
+[node name="structure-metal-roof2" parent="." instance=ExtResource("128_rvf0q")]
+
+[node name="structure-metal-wall2" parent="." instance=ExtResource("129_lpnq6")]
+
+[node name="structure-metal2" parent="." instance=ExtResource("130_i031s")]
+
+[node name="structure-roof2" parent="." instance=ExtResource("131_6te8g")]
+
+[node name="structure2" parent="." instance=ExtResource("132_6f43h")]
+
+[node name="tent-canvas-half2" parent="." instance=ExtResource("133_2xfk7")]
+
+[node name="tent-canvas2" parent="." instance=ExtResource("134_0nagi")]
+
+[node name="tent2" parent="." instance=ExtResource("135_bxjo4")]
+
+[node name="tool-axe-upgraded2" parent="." instance=ExtResource("136_0vo82")]
+
+[node name="tool-axe2" parent="." instance=ExtResource("137_y1tcr")]
+
+[node name="tool-hammer-upgraded2" parent="." instance=ExtResource("138_dyvld")]
+
+[node name="tool-hammer2" parent="." instance=ExtResource("139_v4jei")]
+
+[node name="tool-hoe-upgraded2" parent="." instance=ExtResource("140_jdb47")]
+
+[node name="tool-hoe2" parent="." instance=ExtResource("141_6lhmu")]
+
+[node name="tool-pickaxe-upgraded2" parent="." instance=ExtResource("142_habnd")]
+
+[node name="tool-pickaxe2" parent="." instance=ExtResource("143_0in2r")]
+
+[node name="tool-shovel-upgraded2" parent="." instance=ExtResource("144_ntcin")]
+
+[node name="tool-shovel2" parent="." instance=ExtResource("145_nyjbh")]
+
+[node name="tree-autumn-tall2" parent="." instance=ExtResource("146_rf2ia")]
+
+[node name="tree-autumn-trunk2" parent="." instance=ExtResource("147_pwa2q")]
+
+[node name="tree-autumn2" parent="." instance=ExtResource("148_usu1m")]
+
+[node name="tree-log-small2" parent="." instance=ExtResource("149_sq77x")]
+
+[node name="tree-log3" parent="." instance=ExtResource("150_nqp2q")]
+
+[node name="tree-tall2" parent="." instance=ExtResource("151_k4oe6")]
+
+[node name="tree-trunk3" parent="." instance=ExtResource("152_kwoio")]
+
+[node name="tree2" parent="." instance=ExtResource("153_dbbbe")]
+
+[node name="workbench-anvil2" parent="." instance=ExtResource("154_rd7iu")]
+
+[node name="workbench-grind2" parent="." instance=ExtResource("155_ajxw6")]
+
+[node name="workbench2" parent="." instance=ExtResource("156_nf5jq")]
+
+[node name="barrel3" parent="." instance=ExtResource("157_lijmy")]
+
+[node name="boat-row-large2" parent="." instance=ExtResource("158_41hvy")]
+
+[node name="boat-row-small2" parent="." instance=ExtResource("159_oftnc")]
+
+[node name="bottle-large3" parent="." instance=ExtResource("160_huiwq")]
+
+[node name="bottle3" parent="." instance=ExtResource("161_enbd5")]
+
+[node name="cannon-ball2" parent="." instance=ExtResource("162_t8kse")]
+
+[node name="cannon-mobile2" parent="." instance=ExtResource("163_w3um7")]
+
+[node name="cannon2" parent="." instance=ExtResource("164_4op0q")]
+
+[node name="chest3" parent="." instance=ExtResource("165_yxe1r")]
+
+[node name="crate-bottles2" parent="." instance=ExtResource("166_ttsba")]
+
+[node name="crate2" parent="." instance=ExtResource("167_0wugw")]
+
+[node name="flag-high-pennant2" parent="." instance=ExtResource("168_oftlp")]
+
+[node name="flag-high2" parent="." instance=ExtResource("169_xcj4n")]
+
+[node name="flag-pennant3" parent="." instance=ExtResource("170_uw0a2")]
+
+[node name="flag-pirate-high-pennant2" parent="." instance=ExtResource("171_oug4i")]
+
+[node name="flag-pirate-high2" parent="." instance=ExtResource("172_w2ei5")]
+
+[node name="flag-pirate-pennant2" parent="." instance=ExtResource("173_rivaa")]
+
+[node name="flag-pirate2" parent="." instance=ExtResource("174_6upmn")]
+
+[node name="flag3" parent="." instance=ExtResource("175_47m2w")]
+
+[node name="grass-patch2" parent="." instance=ExtResource("176_3mur1")]
+
+[node name="grass-plant2" parent="." instance=ExtResource("177_1dpl2")]
+
+[node name="grass3" parent="." instance=ExtResource("178_rg4np")]
+
+[node name="hole2" parent="." instance=ExtResource("179_oc8lu")]
+
+[node name="palm-bend2" parent="." instance=ExtResource("180_sngcn")]
+
+[node name="palm-detailed-bend2" parent="." instance=ExtResource("181_5c8r2")]
+
+[node name="palm-detailed-straight2" parent="." instance=ExtResource("182_5555o")]
+
+[node name="palm-straight2" parent="." instance=ExtResource("183_ryes5")]
+
+[node name="rocks-a2" parent="." instance=ExtResource("190_glvf3")]
+
+[node name="rocks-b2" parent="." instance=ExtResource("191_40iwp")]
+
+[node name="rocks-c2" parent="." instance=ExtResource("192_xxl8x")]
+
+[node name="rocks-sand-a2" parent="." instance=ExtResource("193_wlwxr")]
+
+[node name="rocks-sand-b2" parent="." instance=ExtResource("194_vlpm0")]
+
+[node name="rocks-sand-c2" parent="." instance=ExtResource("195_3ga2u")]
+
+[node name="ship-ghost2" parent="." instance=ExtResource("196_fwvb6")]
+
+[node name="ship-large2" parent="." instance=ExtResource("197_blbyh")]
+
+[node name="ship-medium2" parent="." instance=ExtResource("198_qnabu")]
+
+[node name="ship-pirate-large2" parent="." instance=ExtResource("199_kyhm5")]
+
+[node name="ship-pirate-medium2" parent="." instance=ExtResource("200_v7vrc")]
+
+[node name="ship-pirate-small2" parent="." instance=ExtResource("201_7ult8")]
+
+[node name="ship-small2" parent="." instance=ExtResource("202_rtmjk")]
+
+[node name="ship-wreck2" parent="." instance=ExtResource("203_2buea")]
+
+[node name="structure-fence-sides2" parent="." instance=ExtResource("204_s4k35")]
+
+[node name="structure-fence2" parent="." instance=ExtResource("205_m5tlt")]
+
+[node name="structure-platform-dock-small2" parent="." instance=ExtResource("206_743gr")]
+
+[node name="structure-platform-dock2" parent="." instance=ExtResource("207_0v1p2")]
+
+[node name="structure-platform-small2" parent="." instance=ExtResource("208_0utl7")]
+
+[node name="structure-platform2" parent="." instance=ExtResource("209_v2rf5")]
+
+[node name="structure-roof3" parent="." instance=ExtResource("210_l8wn8")]
+
+[node name="structure3" parent="." instance=ExtResource("211_vbthv")]
+
+[node name="tool-paddle2" parent="." instance=ExtResource("212_h05u4")]
+
+[node name="tool-shovel3" parent="." instance=ExtResource("213_r0fmx")]
+
+[node name="tower-base-door2" parent="." instance=ExtResource("214_dcv0c")]
+
+[node name="tower-base3" parent="." instance=ExtResource("215_mmwfy")]
+
+[node name="tower-complete-large2" parent="." instance=ExtResource("216_8m8op")]
+
+[node name="tower-complete-small2" parent="." instance=ExtResource("217_y3kno")]
+
+[node name="tower-middle-windows2" parent="." instance=ExtResource("218_4ih5n")]
+
+[node name="tower-middle2" parent="." instance=ExtResource("219_cnqsi")]
+
+[node name="tower-roof2" parent="." instance=ExtResource("220_o7r7x")]
+
+[node name="tower-top3" parent="." instance=ExtResource("221_4ah1g")]
+
+[node name="tower-watch2" parent="." instance=ExtResource("222_xl16y")]
+
+[node name="banner2" parent="." instance=ExtResource("223_hvshd")]
+
+[node name="bricks2" parent="." instance=ExtResource("224_u0qus")]
+
+[node name="character-soldier2" parent="." instance=ExtResource("225_u6k62")]
+
+[node name="column-damaged2" parent="." instance=ExtResource("226_sssfk")]
+
+[node name="column2" parent="." instance=ExtResource("227_em2wl")]
+
+[node name="statue2" parent="." instance=ExtResource("228_brbyr")]
+
+[node name="tree3" parent="." instance=ExtResource("229_qn3pq")]
+
+[node name="trophy2" parent="." instance=ExtResource("230_rjt5j")]
+
+[node name="weapon-rack2" parent="." instance=ExtResource("231_buhdd")]
+
+[node name="weapon-spear2" parent="." instance=ExtResource("232_lcd3w")]
+
+[node name="weapon-sword2" parent="." instance=ExtResource("233_0fnnh")]
+
+[node name="spike-block-wide2" parent="." instance=ExtResource("234_wwpbj")]
+
+[node name="spike-block2" parent="." instance=ExtResource("235_nkep1")]
+
+[node name="stones2" parent="." instance=ExtResource("236_8bghp")]
+
+[node name="trap-spikes-large2" parent="." instance=ExtResource("237_wg41r")]
+
+[node name="trap-spikes2" parent="." instance=ExtResource("238_cfe4a")]
+
+[node name="tree-pine-small2" parent="." instance=ExtResource("239_p55yk")]
+
+[node name="tree-pine-snow-small2" parent="." instance=ExtResource("240_wo8wn")]
+
+[node name="tree-pine-snow2" parent="." instance=ExtResource("241_io1dn")]
+
+[node name="tree-pine2" parent="." instance=ExtResource("242_k6yun")]
+
+[node name="tree-snow2" parent="." instance=ExtResource("243_gf7io")]
+
+[node name="tree4" parent="." instance=ExtResource("244_1aw0y")]
+
+[node name="sign2" parent="." instance=ExtResource("245_k6pcc")]
+
+[node name="heart2" parent="." instance=ExtResource("246_c58wb")]
+
+[node name="jewel2" parent="." instance=ExtResource("247_fus8u")]
+
+[node name="key2" parent="." instance=ExtResource("248_bhdo6")]
+
+[node name="lever2" parent="." instance=ExtResource("249_fy16a")]
+
+[node name="lock2" parent="." instance=ExtResource("250_50fj4")]
+
+[node name="mushrooms2" parent="." instance=ExtResource("251_6eh6p")]
+
+[node name="poles2" parent="." instance=ExtResource("252_uxcbu")]
+
+[node name="plant2" parent="." instance=ExtResource("253_bo6qa")]
+
+[node name="bomb2" parent="." instance=ExtResource("254_0qewq")]
+
+[node name="button-round2" parent="." instance=ExtResource("255_fawlr")]
+
+[node name="button-square2" parent="." instance=ExtResource("256_jnrro")]
+
+[node name="rocks2" parent="." instance=ExtResource("257_3am8g")]
+
+[node name="flag4" parent="." instance=ExtResource("258_habk7")]
+
+[node name="flowers-tall2" parent="." instance=ExtResource("259_kx3kx")]
+
+[node name="flowers" parent="." instance=ExtResource("260_5jkaq")]
+
+[node name="ladder-broken2" parent="." instance=ExtResource("261_sysua")]
+
+[node name="ladder-long2" parent="." instance=ExtResource("262_ktnwo")]
+
+[node name="ladder2" parent="." instance=ExtResource("263_aayk8")]
+
+[node name="arrow2" parent="." instance=ExtResource("258_oxhth")]
+
+[node name="arrows2" parent="." instance=ExtResource("259_xohvm")]
+
+[node name="barrel4" parent="." instance=ExtResource("260_ngckh")]
+
+[node name="chest4" parent="." instance=ExtResource("261_gb46j")]
+
+[node name="coin-bronze2" parent="." instance=ExtResource("262_yc4ge")]
+
+[node name="coin-gold2" parent="." instance=ExtResource("263_6h6m4")]
+
+[node name="coin-silver2" parent="." instance=ExtResource("264_d0l40")]
+
+[node name="crate-item-strong2" parent="." instance=ExtResource("265_8omr8")]
+
+[node name="crate-item2" parent="." instance=ExtResource("266_4r678")]
+
+[node name="crate-strong2" parent="." instance=ExtResource("267_77k7w")]
+
+[node name="crate3" parent="." instance=ExtResource("268_pg1ut")]
+
+[node name="door-large-open2" parent="." instance=ExtResource("269_cno3k")]
+
+[node name="door-open2" parent="." instance=ExtResource("270_0eqnx")]
+
+[node name="door-rotate-large2" parent="." instance=ExtResource("271_ulc1a")]
+
+[node name="door-rotate2" parent="." instance=ExtResource("272_nji1o")]
+
+[node name="fence-broken2" parent="." instance=ExtResource("273_alk53")]
+
+[node name="fence-corner-curved2" parent="." instance=ExtResource("274_rtxqs")]
+
+[node name="fence-corner2" parent="." instance=ExtResource("275_iq8ta")]
+
+[node name="fence-low-broken2" parent="." instance=ExtResource("276_04fhu")]
+
+[node name="fence-low-corner-curved2" parent="." instance=ExtResource("277_rnekd")]
+
+[node name="fence-low-corner2" parent="." instance=ExtResource("278_agwpv")]
+
+[node name="fence-low-straight2" parent="." instance=ExtResource("279_ukpxl")]
+
+[node name="fence-straight2" parent="." instance=ExtResource("280_2nuxx")]
+
+[node name="saw2" parent="." instance=ExtResource("281_b656s")]
+
+[node name="grass4" parent="." instance=ExtResource("282_kd17i")]
+
+[node name="wall-corner3" parent="." instance=ExtResource("283_6p58p")]
+
+[node name="wall-gate2" parent="." instance=ExtResource("284_qd5fw")]
+
+[node name="wall3" parent="." instance=ExtResource("285_byjme")]
