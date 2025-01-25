@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://cae287oyu054a"]
+
+[ext_resource type="PackedScene" uid="uid://bn7n25viqpfj7" path="res://assets/meshes/WizardTree.glb" id="1_tq7gs"]
+[ext_resource type="PackedScene" uid="uid://bl3dq835f11jy" path="res://assets/meshes/Tree_Green_01.glb" id="2_fy5kq"]
+[ext_resource type="PackedScene" uid="uid://coep0r43xqvtr" path="res://assets/meshes/Tree_Green_02.glb" id="3_th4hb"]
+[ext_resource type="PackedScene" uid="uid://ddaq1my1mwll8" path="res://assets/meshes/Tree_Green_03.glb" id="4_fl2r8"]
+[ext_resource type="PackedScene" uid="uid://c8sff2xwth0sr" path="res://assets/meshes/WizardTreePink.glb" id="5_bwj4a"]
+
+[node name="TestFlo" type="Node3D"]
+
+[node name="WizardTree" parent="." instance=ExtResource("1_tq7gs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.27689, 0, 2.24835)
+
+[node name="Tree_Green_01" parent="." instance=ExtResource("2_fy5kq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6141, 0, 11.8786)
+
+[node name="Tree_Green_02" parent="." instance=ExtResource("3_th4hb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.24799, -9.53674e-07, 10.3703)
+
+[node name="Tree_Green_032" parent="." instance=ExtResource("4_fl2r8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.5063, 0, 11.6955)
+
+[node name="WizardTree2" parent="." instance=ExtResource("1_tq7gs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5562, -9.53674e-07, -7.81378)
+
+[node name="WizardTree2" parent="WizardTree2" instance=ExtResource("1_tq7gs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5562, -9.53674e-07, -7.81378)
+
+[node name="WizardTreePink" parent="WizardTree2" instance=ExtResource("5_bwj4a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.22263, 9.53674e-07, 26.6736)

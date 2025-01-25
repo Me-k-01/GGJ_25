@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://cwdsfrijytqev"]
 
 [ext_resource type="Shader" path="res://shaders/bubble.gdshader" id="1_iggj3"]
-[ext_resource type="Texture2D" uid="uid://1wioirrgd747" path="res://shaders/bubble_texture.jpg" id="2_toioc"]
+[ext_resource type="Texture2D" uid="uid://1wioirrgd747" path="res://assets/textures/bubble_texture.jpg" id="2_toioc"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_4rc4x"]
 
