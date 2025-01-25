@@ -10,6 +10,21 @@ varying vec3 world_position;
 uniform vec2 eye_center = vec2(0.5, 0.5); // Center of the googly eye in UV space
 
 uniform bool teary_eye;
+float bnoise( in float x )
+{
+    // setup    
+    float i = floor(x);
+    float f = fract(x);
+    float s = sign(fract(x/2.0)-0.5);
+    
+    // use some hash to create a random value k in [0..1] from i
+  //float k = hash(uint(i));
+  //float k = 0.5+0.5*sin(i);
+    float k = fract(i*.1731);
+
+    // quartic polynomial
+    return s*f*(f-1.0)*((16.0*k-4.0)*f*(f-1.0)-1.0);
+} 
 
 void vertex() {
 	// Called for every vertex the material is visible on. 
@@ -37,8 +52,10 @@ void fragment() {
 		eye_back = texture(back_eye_texture, teary_eye_uv   ).rgb;
 		light_eye_back = texture(light_eye_texture, teary_eye_uv   ).rgb;
 	} else { 
-	    float offset_x = sin(TIME * speed ) * jiggle_intensity;
-	    float offset_y = cos(TIME * speed ) * jiggle_intensity;
+	    //float offset_x = sin(TIME * speed ) * jiggle_intensity;
+	    //float offset_y = cos(TIME * speed ) * jiggle_intensity;
+	    float offset_x = sin((TIME * speed )) * jiggle_intensity;
+	    float offset_y = cos((TIME * speed )) * jiggle_intensity;
 		 
 	    vec2 jiggle_eye_uv = UV + vec2(offset_x, offset_y) ;
  
