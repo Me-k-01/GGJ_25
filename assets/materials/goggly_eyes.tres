@@ -1,0 +1,17 @@
+[gd_resource type="ShaderMaterial" load_steps=5 format=3 uid="uid://bvo67mnqesebc"]
+
+[ext_resource type="Shader" path="res://shaders/goggly_eyes.gdshader" id="1_4eain"]
+[ext_resource type="Texture2D" uid="uid://bm215qossplx2" path="res://assets/googly_eyes/0.png" id="2_o7ep1"]
+[ext_resource type="Texture2D" uid="uid://brnuy1gget8ow" path="res://assets/googly_eyes/1.png" id="3_kwhdc"]
+[ext_resource type="Texture2D" uid="uid://bxx0elfoyqjwl" path="res://assets/googly_eyes/2.png" id="4_omq2a"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_4eain")
+shader_parameter/jiggle_intensity = 0.165
+shader_parameter/speed = 12.805
+shader_parameter/eye_center = Vector2(0.5, 0.5)
+shader_parameter/teary_eye = false
+shader_parameter/back_eye_texture = ExtResource("2_o7ep1")
+shader_parameter/iris_eye_texture = ExtResource("3_kwhdc")
+shader_parameter/light_eye_texture = ExtResource("4_omq2a")
