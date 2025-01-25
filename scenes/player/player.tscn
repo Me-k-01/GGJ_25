@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://bgpmouhwxfr2t"]
 
-[ext_resource type="PackedScene" uid="uid://b1ot6gn6tms6h" path="res://player/player_3d_template.tscn" id="1_ydxld"]
+[ext_resource type="PackedScene" path="res://player/player_3d_template.tscn" id="1_ydxld"]
 [ext_resource type="PackedScene" uid="uid://dwqm4i10twx1y" path="res://scenes/player/blower.tscn" id="2_gjdak"]
-[ext_resource type="PackedScene" uid="uid://bgi6xrol1jwf1" path="res://scenes/player/generator.tscn" id="3_otw4o"]
-[ext_resource type="PackedScene" uid="uid://ct73m7givxte8" path="res://scenes/player/jumper.tscn" id="4_tts7v"]
+[ext_resource type="PackedScene" path="res://scenes/player/generator.tscn" id="3_otw4o"]
+[ext_resource type="PackedScene" path="res://scenes/player/jumper.tscn" id="4_tts7v"]
 
 [node name="Player" instance=ExtResource("1_ydxld")]
 

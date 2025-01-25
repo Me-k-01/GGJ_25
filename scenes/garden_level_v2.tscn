@@ -16,12 +16,12 @@
 [ext_resource type="PackedScene" uid="uid://cwqhtvqnrawqx" path="res://assets/Foret/grass_scene.tscn" id="17_ulo2k"]
 [ext_resource type="PackedScene" uid="uid://cutvc5v2bb24x" path="res://assets/grid1_meshes/block-grass-corner-low.glb" id="18_i7325"]
 [ext_resource type="Texture2D" uid="uid://di4th5bmaivkl" path="res://assets/grid1_meshes/Textures/colormap.png" id="18_v7jjt"]
-[ext_resource type="PackedScene" path="res://player/player_3d_template.tscn" id="18_wk2rh"]
 [ext_resource type="Texture2D" uid="uid://c4237p06d45dr" path="res://assets/textures_waterfall/rock_texture/stone2.png" id="20_frbi6"]
 [ext_resource type="Shader" uid="uid://ch78au2m2jhee" path="res://shaders/uv_shader_test.tres" id="21_pgqnj"]
 [ext_resource type="PackedScene" uid="uid://b5svsapmvnilg" path="res://assets/pirate_kit/tower-complete-small.glb" id="22_4ivgv"]
 [ext_resource type="Texture2D" uid="uid://cou4peya0bh0e" path="res://assets/textures_waterfall/waterfall_textures/waterfall_texture_colored.png" id="22_ih8xs"]
 [ext_resource type="PackedScene" uid="uid://bn7n25viqpfj7" path="res://assets/meshes/WizardTree.glb" id="23_3oy7y"]
+[ext_resource type="PackedScene" uid="uid://bgpmouhwxfr2t" path="res://scenes/player/player.tscn" id="23_bvuvr"]
 [ext_resource type="PackedScene" uid="uid://cxd520vcn5qon" path="res://assets/arena_kit/wall.glb" id="23_c16an"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_op5e2"]
@@ -645,9 +645,6 @@ transform = Transform3D(91.2071, 1.57095, 49.5178, 9.078e-06, -614.605, 0.531144
 [node name="block-grass-corner-low10" parent="." instance=ExtResource("18_i7325")]
 transform = Transform3D(103.868, 0.354472, 11.1719, 9.09867e-06, -614.604, 0.531144, 11.5094, -3.19851, -100.823, -177.491, -9.1684, -158.956)
 
-[node name="Player3DTemplate" parent="." instance=ExtResource("18_wk2rh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.14605, 0.75, -4.15812)
-
 [node name="waterfall" type="Node3D" parent="."]
 transform = Transform3D(-0.912344, -0.000274478, 2.57889, -0.00440343, 2.74602, -0.000942852, -2.90701, -0.00407343, -0.809365, -118.002, -13.5364, -62.6997)
 
@@ -713,3 +710,11 @@ light_energy = 0.6
 
 [node name="WizardTree3" parent="." instance=ExtResource("23_3oy7y")]
 transform = Transform3D(-1.5384, 0, -0.366356, 0, 1.58142, 0, 0.366356, 0, -1.5384, -3.91621, -0.234635, 62.4486)
+
+[node name="Player" parent="." instance=ExtResource("23_bvuvr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.79412, 0.750001, -4.46822)
+
+[node name="Generator" parent="Player/SophiaSkin" index="4"]
+map_path = NodePath("../../..")
+
+[editable path="Player"]
