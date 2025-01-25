@@ -20,9 +20,9 @@ func _process(delta: float) -> void:
 			if collider.is_in_group("air_bubble") :
 				if is_double_jumping :
 					$"../../.".is_double_jumping = true
-					$"../../.".jump(2.25)
+					$"../../.".jump(2.0, $"../../.".double_jump_max_velocity - 1)
 				else :
-					$"../../.".jump(1.5)
+					$"../../.".jump(1.5, $"../../.".max_velocity - 1)
 					$"../../.".is_double_jumping = false
 				is_double_jumping = true
 				timer = time_between_jump
