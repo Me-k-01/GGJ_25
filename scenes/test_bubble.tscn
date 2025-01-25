@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://ciiyo8ybyw1n"]
+[gd_scene load_steps=8 format=3 uid="uid://ciiyo8ybyw1n"]
 
 [ext_resource type="MeshLibrary" uid="uid://b5wufnvi8mahd" path="res://assets/ground_lib.tres" id="1_bj6tu"]
 [ext_resource type="PackedScene" uid="uid://ikp043y7ypa3" path="res://scenes/bubbles/air_bubble.tscn" id="1_rqxtj"]
 [ext_resource type="PackedScene" uid="uid://dgg8s5tnhr2sg" path="res://scenes/automatic_generator/automatic_generator.tscn" id="1_spk6u"]
 [ext_resource type="MeshLibrary" uid="uid://b6lll568yofw5" path="res://assets/prop_lib.tres" id="2_6npqn"]
+[ext_resource type="PackedScene" uid="uid://cyngdpntlqlkm" path="res://scenes/bubbles/water_bubble.tscn" id="2_b30o5"]
 [ext_resource type="PackedScene" uid="uid://bptxkdf10by2" path="res://assets/pirate_kit/ship-wreck.glb" id="3_0klde"]
 [ext_resource type="PackedScene" uid="uid://bgpmouhwxfr2t" path="res://scenes/player/player.tscn" id="5_dtqa8"]
 
@@ -54,5 +55,8 @@ polygon = PackedVector2Array(2.41551, 0.41592)
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 2.77412, 21)
 use_collision = true
+
+[node name="WaterBubble" parent="." instance=ExtResource("2_b30o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.972101, 1.62881, 3.19818)
 
 [editable path="Player"]

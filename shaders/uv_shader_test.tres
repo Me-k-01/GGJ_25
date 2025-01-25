@@ -1,4 +1,4 @@
-[gd_resource type="VisualShader" load_steps=6 format=3 uid="uid://ch78au2m2jhee"]
+[gd_resource type="VisualShader" load_steps=8 format=3 uid="uid://dmb7sjttxpwv5"]
 
 [sub_resource type="VisualShaderNodeTexture2DParameter" id="VisualShaderNodeTexture2DParameter_uklyg"]
 parameter_name = "Main_texture"
@@ -14,6 +14,11 @@ input_name = "time"
 
 [sub_resource type="VisualShaderNodeVec2Parameter" id="VisualShaderNodeVec2Parameter_ju6cr"]
 parameter_name = "Vector2Parameter"
+
+[sub_resource type="VisualShaderNodeVectorDecompose" id="VisualShaderNodeVectorDecompose_gjpff"]
+
+[sub_resource type="VisualShaderNodeMultiplyAdd" id="VisualShaderNodeMultiplyAdd_f1gly"]
+default_input_values = [0, 0.0, 1, 2.085, 2, 0.585]
 
 [resource]
 code = "shader_type spatial;
@@ -48,15 +53,20 @@ void fragment() {
 
 }
 "
-graph_offset = Vector2(-654.8, 248.832)
+graph_offset = Vector2(-50.1319, 21.7897)
+nodes/fragment/0/position = Vector2(780, 160)
 nodes/fragment/2/node = SubResource("VisualShaderNodeTexture2DParameter_uklyg")
 nodes/fragment/2/position = Vector2(-460, 40)
 nodes/fragment/3/node = SubResource("VisualShaderNodeTexture_rg2j1")
-nodes/fragment/3/position = Vector2(-60, 220)
+nodes/fragment/3/position = Vector2(0, 300)
 nodes/fragment/4/node = SubResource("VisualShaderNodeUVFunc_mo15m")
 nodes/fragment/4/position = Vector2(-460, 460)
 nodes/fragment/6/node = SubResource("VisualShaderNodeInput_ihgk7")
 nodes/fragment/6/position = Vector2(-780, 580)
 nodes/fragment/7/node = SubResource("VisualShaderNodeVec2Parameter_ju6cr")
 nodes/fragment/7/position = Vector2(-820, 360)
-nodes/fragment/connections = PackedInt32Array(2, 0, 3, 2, 3, 0, 0, 0, 4, 0, 3, 0, 6, 0, 4, 2, 7, 0, 4, 1)
+nodes/fragment/8/node = SubResource("VisualShaderNodeVectorDecompose_gjpff")
+nodes/fragment/8/position = Vector2(220, 420)
+nodes/fragment/9/node = SubResource("VisualShaderNodeMultiplyAdd_f1gly")
+nodes/fragment/9/position = Vector2(480, 420)
+nodes/fragment/connections = PackedInt32Array(2, 0, 3, 2, 3, 0, 0, 0, 4, 0, 3, 0, 6, 0, 4, 2, 7, 0, 4, 1, 3, 0, 8, 0, 8, 0, 9, 0)

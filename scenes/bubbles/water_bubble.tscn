@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://cyngdpntlqlkm"]
+[gd_scene load_steps=4 format=3 uid="uid://cyngdpntlqlkm"]
 
 [ext_resource type="PackedScene" uid="uid://hdirp6r467n5" path="res://scenes/bubbles/bubble.tscn" id="1_ny480"]
+[ext_resource type="PackedScene" uid="uid://cwdsfrijytqev" path="res://scenes/bubbles/bubble_mesh.tscn" id="2_h2tab"]
+[ext_resource type="Material" uid="uid://d4c0fvvcsv4w8" path="res://assets/materials/waterfall_texture.tres" id="3_txc75"]
 
 [node name="WaterBubble" instance=ExtResource("1_ny480")]
 mass = 0.5
@@ -8,5 +10,6 @@ mass = 0.5
 [node name="BubbleMesh" parent="." index="0"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 
-[node name="Bubble Collision" parent="." index="1"]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+[node name="WaterBubbleMesh" parent="BubbleMesh" index="0" instance=ExtResource("2_h2tab")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+material_override = ExtResource("3_txc75")
