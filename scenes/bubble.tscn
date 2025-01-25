@@ -15,14 +15,14 @@ shader_parameter/bubble_patern_scale = 1.0
 shader_parameter/distortion_smoothness = 0.06
 shader_parameter/distortion_power = 0.1
 shader_parameter/distortion_speed = 0.51
-shader_parameter/base_color = Color(0.74, 0.787667, 1, 1)
+shader_parameter/base_color = Color(0.73, 0.7795, 1, 1)
 shader_parameter/noise_texture = SubResource("NoiseTexture2D_8xmus")
 shader_parameter/color_texture = ExtResource("2_toioc")
 
-[sub_resource type="SphereMesh" id="SphereMesh_3k3vi"]
+[sub_resource type="SphereMesh" id="SphereMesh_cusqc"]
 
 [node name="Bubble" type="Node3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 material_override = SubResource("ShaderMaterial_6256q")
-mesh = SubResource("SphereMesh_3k3vi")
+mesh = SubResource("SphereMesh_cusqc")

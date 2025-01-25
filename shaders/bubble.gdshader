@@ -1,4 +1,5 @@
 shader_type spatial;
+render_mode cull_disabled;
 
 uniform sampler2D noise_texture; // Displacement noise
 uniform sampler2D color_texture; // Rainbow color of the bubble
@@ -32,7 +33,7 @@ void fragment()
 	float basic_fresnel = fresnel(3.0, NORMAL, VIEW);
 	
 	vec3 fresnel = fresnel_glow(4.0, 4.5, base_color.rgb, NORMAL, VIEW);
-	ALPHA = basic_fresnel;
+	ALPHA = basic_fresnel + 0.05f;
 	ALBEDO = (base_color.rgb + fresnel)*rainbow;
 
 }
