@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://e6qdhowqooeo"]
+
+[ext_resource type="Shader" uid="uid://ch78au2m2jhee" path="res://shaders/uv_shader_test.tres" id="1_5kdp0"]
+[ext_resource type="Texture2D" uid="uid://cou4peya0bh0e" path="res://assets/textures_waterfall/waterfall_textures/waterfall_texture_colored.png" id="2_hnfew"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_5kdp0")
+shader_parameter/Vector2Parameter = Vector2(0, -1)
+shader_parameter/Main_texture = ExtResource("2_hnfew")
