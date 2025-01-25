@@ -58,7 +58,8 @@ theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_08ahq")
 theme_override_styles/hover = SubResource("StyleBoxFlat_08ahq")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_augei")
 theme_override_styles/normal = SubResource("StyleBoxFlat_46ivy")
-text = "Continuer"
+text = "Resume
+"
 metadata/_edit_group_ = true
 
 [node name="Button2" type="Button" parent="VBoxContainer"]
@@ -70,7 +71,8 @@ theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_08ahq")
 theme_override_styles/hover = SubResource("StyleBoxFlat_08ahq")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_augei")
 theme_override_styles/normal = SubResource("StyleBoxFlat_46ivy")
-text = "Quitter"
+text = "Credits
+"
 metadata/_edit_group_ = true
 
 [node name="Button3" type="Button" parent="VBoxContainer"]
@@ -82,6 +84,6 @@ theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_08ahq")
 theme_override_styles/hover = SubResource("StyleBoxFlat_08ahq")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_augei")
 theme_override_styles/normal = SubResource("StyleBoxFlat_46ivy")
-text = "Credits
+text = "Quit
 "
 metadata/_edit_group_ = true

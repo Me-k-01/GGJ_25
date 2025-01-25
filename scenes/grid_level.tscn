@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://7ga2w8sdx8pl"]
+[gd_scene load_steps=3 format=3 uid="uid://7ga2w8sdx8pl"]
 
 [ext_resource type="MeshLibrary" uid="uid://c0vfd653ocpx1" path="res://assets/grid_lib_1.tres" id="1_v2g20"]
+[ext_resource type="PackedScene" uid="uid://cutvc5v2bb24x" path="res://assets/grid/block-grass-corner-low.glb" id="2_sw3v1"]
 
 [node name="GridLevel" type="Node3D"]
 
@@ -12,3 +13,6 @@ data = {
 }
 metadata/_edit_group_ = true
 metadata/_editor_floor_ = Vector3(0, 2, 0)
+
+[node name="block-grass-corner-low2" parent="." instance=ExtResource("2_sw3v1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.22394, 1.44772, -13.8975)
