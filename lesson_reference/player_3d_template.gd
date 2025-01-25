@@ -76,8 +76,7 @@ func _unhandled_input(event: InputEvent) -> void:
 func _physics_process(delta: float) -> void:
 	_camera_pivot.rotation.x += _camera_input_direction.y * delta
 	_camera_pivot.rotation.x = clamp(_camera_pivot.rotation.x, tilt_lower_limit, tilt_upper_limit)
-	_camera_pivot.rotation.y += _camera_input_direction.x * delta
-
+	_camera_pivot.rotation.y += _camera_input_direction.x * delta 
 	_camera_input_direction = Vector2.ZERO
 
 	# Calculate movement input and align it to the camera's direction.
