@@ -50,6 +50,9 @@ transform = Transform3D(-0.359903, 0.160753, -0.919037, 0.21475, 0.972869, 0.086
 [node name="Player" parent="." instance=ExtResource("5_dtqa8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, 0)
 
+[node name="Generator" parent="Player/SophiaSkin" index="4"]
+map_path = NodePath("../../..")
+
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.330103, 0.943945, 0, -0.943945, 0.330103, 0, 5.07477, 0)
 
@@ -62,3 +65,5 @@ polygon = PackedVector2Array(2.41551, 0.41592)
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 2.77412, 21)
 use_collision = true
+
+[editable path="Player"]

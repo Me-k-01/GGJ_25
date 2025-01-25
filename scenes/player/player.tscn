@@ -2,18 +2,15 @@
 
 [ext_resource type="PackedScene" uid="uid://b1ot6gn6tms6h" path="res://player/player_3d_template.tscn" id="1_ydxld"]
 [ext_resource type="PackedScene" uid="uid://dwqm4i10twx1y" path="res://scenes/player/blower.tscn" id="2_gjdak"]
-[ext_resource type="Script" path="res://scripts/jumper.gd" id="3_yge6n"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_ri6bo"]
+[ext_resource type="PackedScene" uid="uid://bgi6xrol1jwf1" path="res://scenes/player/generator.tscn" id="3_otw4o"]
+[ext_resource type="PackedScene" uid="uid://ct73m7givxte8" path="res://scenes/player/jumper.tscn" id="4_tts7v"]
 
 [node name="Player" instance=ExtResource("1_ydxld")]
 
-[node name="Blower" parent="SophiaSkin" index="4" instance=ExtResource("2_gjdak")]
+[node name="Generator" parent="SophiaSkin" index="4" instance=ExtResource("3_otw4o")]
+
+[node name="Blower" parent="SophiaSkin" index="5" instance=ExtResource("2_gjdak")]
 transform = Transform3D(3, 0, 0, 0, -1.31134e-07, -3, 0, 3, -1.31134e-07, 0, 1, 2)
 player_path = NodePath("../..")
 
-[node name="Jumper" type="ShapeCast3D" parent="." index="5"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.619063, 0)
-shape = SubResource("BoxShape3D_ri6bo")
-collision_mask = 2
-script = ExtResource("3_yge6n")
+[node name="Jumper" parent="SophiaSkin" index="6" instance=ExtResource("4_tts7v")]
