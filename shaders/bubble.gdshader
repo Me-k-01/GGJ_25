@@ -33,9 +33,9 @@ void fragment()
 	float basic_fresnel = fresnel(3.0, NORMAL, VIEW);
 
 	vec3 fresnel = fresnel_glow(4.0, 4.5, base_color.rgb, NORMAL, VIEW);
-	ALPHA = basic_fresnel + 0.05f;
+	ALPHA = basic_fresnel + 0.1f;
 	ALBEDO = (base_color.rgb + fresnel)*rainbow;
-
+	ROUGHNESS = 0.0f;
 }
 
  //
