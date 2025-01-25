@@ -1,0 +1,62 @@
+[gd_resource type="VisualShader" load_steps=6 format=3 uid="uid://ch78au2m2jhee"]
+
+[sub_resource type="VisualShaderNodeTexture2DParameter" id="VisualShaderNodeTexture2DParameter_uklyg"]
+parameter_name = "Main_texture"
+
+[sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_rg2j1"]
+source = 5
+
+[sub_resource type="VisualShaderNodeUVFunc" id="VisualShaderNodeUVFunc_mo15m"]
+default_input_values = [1, Vector2(0, -1), 2, Vector2(0, 0)]
+
+[sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_ihgk7"]
+input_name = "time"
+
+[sub_resource type="VisualShaderNodeVec2Parameter" id="VisualShaderNodeVec2Parameter_ju6cr"]
+parameter_name = "Vector2Parameter"
+
+[resource]
+code = "shader_type spatial;
+render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_lambert, specular_schlick_ggx;
+
+uniform vec2 Vector2Parameter;
+uniform sampler2D Main_texture;
+
+
+
+void fragment() {
+// Vector2Parameter:7
+	vec2 n_out7p0 = Vector2Parameter;
+
+
+// Input:6
+	float n_out6p0 = TIME;
+
+
+// UVFunc:4
+	vec2 n_out4p0 = vec2(n_out6p0) * n_out7p0 + UV;
+
+
+	vec4 n_out3p0;
+// Texture2D:3
+	n_out3p0 = texture(Main_texture, n_out4p0);
+
+
+// Output:0
+	ALBEDO = vec3(n_out3p0.xyz);
+
+
+}
+"
+graph_offset = Vector2(-654.8, 248.832)
+nodes/fragment/2/node = SubResource("VisualShaderNodeTexture2DParameter_uklyg")
+nodes/fragment/2/position = Vector2(-460, 40)
+nodes/fragment/3/node = SubResource("VisualShaderNodeTexture_rg2j1")
+nodes/fragment/3/position = Vector2(-60, 220)
+nodes/fragment/4/node = SubResource("VisualShaderNodeUVFunc_mo15m")
+nodes/fragment/4/position = Vector2(-460, 460)
+nodes/fragment/6/node = SubResource("VisualShaderNodeInput_ihgk7")
+nodes/fragment/6/position = Vector2(-780, 580)
+nodes/fragment/7/node = SubResource("VisualShaderNodeVec2Parameter_ju6cr")
+nodes/fragment/7/position = Vector2(-820, 360)
+nodes/fragment/connections = PackedInt32Array(2, 0, 3, 2, 3, 0, 0, 0, 4, 0, 3, 0, 6, 0, 4, 2, 7, 0, 4, 1)

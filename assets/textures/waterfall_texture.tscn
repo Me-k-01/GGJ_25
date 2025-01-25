@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://3rsbgeodr0ph"]
+
+[ext_resource type="Shader" uid="uid://ch78au2m2jhee" path="res://shaders/uv_shader_test.tres" id="1_ojpe7"]
+[ext_resource type="Texture2D" uid="uid://cou4peya0bh0e" path="res://assets/textures_waterfall/waterfall_textures/waterfall_texture_colored.png" id="2_bybnc"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_s8k3i"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cmm6u"]
+render_priority = 0
+shader = ExtResource("1_ojpe7")
+shader_parameter/Vector2Parameter = Vector2(0, -1)
+shader_parameter/Main_texture = ExtResource("2_bybnc")
+
+[node name="MeshInstance3D" type="MeshInstance3D"]
+mesh = SubResource("PlaneMesh_s8k3i")
+surface_material_override/0 = SubResource("ShaderMaterial_cmm6u")
