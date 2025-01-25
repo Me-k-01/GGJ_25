@@ -15,6 +15,9 @@ extends CharacterBody3D
 ## animation tree changes between the idle and running states.
 @export var stopping_speed := 1.0
 
+@export var max_velocity := 10.0
+@export var double_jump_max_velocity := 15.0
+
 @export_group("Camera")
 @export_range(0.0, 1.0) var mouse_sensitivity := 0.25
 @export var tilt_upper_limit := PI / 3.0
@@ -27,6 +30,8 @@ var ground_height := 0.0
 var _gravity := -30.0
 var _was_on_floor_last_frame := true
 var _camera_input_direction := Vector2.ZERO
+
+var is_double_jumping := false
 
 ## The last movement or aim direction input by the player. We use this to orient
 ## the character model.
@@ -72,8 +77,9 @@ func _unhandled_input(event: InputEvent) -> void:
 		_camera_input_direction.x = -event.relative.x * mouse_sensitivity
 		_camera_input_direction.y = -event.relative.y * mouse_sensitivity
 
-func jump(multiplier):
+func jump(multiplier, min_velocity):
 	velocity.y += jump_impulse * multiplier
+	if velocity.y <= min_velocity : velocity.y = min_velocity
 	_skin.jump()
 	_jump_sound.play()
 
@@ -113,7 +119,7 @@ func _physics_process(delta: float) -> void:
 	var ground_speed := Vector2(velocity.x, velocity.z).length()
 	var is_just_jumping := Input.is_action_just_pressed("jump") and is_on_floor()
 	if is_just_jumping:
-		jump(1)
+		jump(1, max_velocity - 1)
 	elif not is_on_floor() and velocity.y < 0:
 		_skin.fall()
 	elif is_on_floor():
@@ -128,4 +134,11 @@ func _physics_process(delta: float) -> void:
 		_landing_sound.play()
 
 	_was_on_floor_last_frame = is_on_floor()
+	
+	if !is_double_jumping :
+		print("basic jumping")
+		if velocity.y >= max_velocity : velocity.y = max_velocity
+	else :
+		print("double jumping")
+		if velocity.y >= double_jump_max_velocity : velocity.y = double_jump_max_velocity
 	move_and_slide()

@@ -33,9 +33,8 @@ func _process(delta: float) -> void:
 				if is_instance_valid(air_bubbles[i]) :
 					new_air_bubbles.append(air_bubbles[i])
 			air_bubbles = new_air_bubbles
-
+			
 			if air_bubbles.size() > max_bubbles :
 				instance = air_bubbles[0]
-				instance.timer = instance.shrinking_time
+				instance.lifetime_timer = instance.shrinking_time
 				air_bubbles.pop_front()
-				

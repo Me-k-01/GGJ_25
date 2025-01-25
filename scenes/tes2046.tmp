@@ -11,7 +11,9 @@
 
 [node name="AutomaticGenerator" parent="." instance=ExtResource("1_spk6u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -9)
-map_path = NodePath("..")
+map_path = NodePath("")
+max_bubbles = 1
+cooldown = 5
 
 [node name="Bubble" parent="." instance=ExtResource("1_rqxtj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.36983, 1.47036, 5.3412)
