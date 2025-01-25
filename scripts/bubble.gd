@@ -1,27 +1,33 @@
 extends RigidBody3D
 
 @export var lifetime = -1.0
+@export var generation_time = 0.2
 @export var shrinking_time = 1.0
 @export var levitation_height := 2.90
 @export var float_force := 5.0
 @export var drag := 0.05
 @export var angular_drag := 0.05
 
-var timer = 0.0
+var generation_timer = 0.0 
+var lifetime_timer = 0.0
 var submerged := false
 var base_scale := Vector3.ZERO
 
 func _ready() -> void :
-	timer = lifetime
+	lifetime_timer = lifetime
 	base_scale = $"BubbleMesh".scale
 
 func _process(delta : float) -> void :
+	generation_timer += delta
+	if generation_timer <= generation_time :
+		$"BubbleMesh".scale = base_scale * generation_timer / generation_time
+		$"BubbleCollision".scale = base_scale * generation_timer / generation_time
 	if lifetime != -1 :
-		timer -= delta
-		if timer <= shrinking_time :
-			$"BubbleMesh".scale = base_scale * timer / shrinking_time
-			$"BubbleCollision".scale = base_scale * timer / shrinking_time
-		if timer <= 0 :
+		lifetime_timer -= delta
+		if lifetime_timer <= shrinking_time :
+			$"BubbleMesh".scale = base_scale * lifetime_timer / shrinking_time
+			$"BubbleCollision".scale = base_scale * lifetime_timer / shrinking_time
+		if lifetime_timer <= 0 :
 			queue_free()
 
 func _physics_process(_delta: float) -> void:
