@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://hdirp6r467n5"]
+[gd_scene load_steps=5 format=3 uid="uid://hdirp6r467n5"]
 
 [ext_resource type="PackedScene" uid="uid://cwdsfrijytqev" path="res://scenes/bubbles/bubble_mesh.tscn" id="1_6qrw5"]
 [ext_resource type="Script" path="res://scripts/bubble.gd" id="1_xbgaq"]
+[ext_resource type="Material" uid="uid://b6l2jmrt842wa" path="res://assets/materials/bubble.material" id="3_kc2sn"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_y7q7m"]
 
@@ -11,6 +12,7 @@ mass = 0.001
 script = ExtResource("1_xbgaq")
 
 [node name="BubbleMesh" parent="." instance=ExtResource("1_6qrw5")]
+material_override = ExtResource("3_kc2sn")
 
 [node name="Bubble Collision" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_y7q7m")

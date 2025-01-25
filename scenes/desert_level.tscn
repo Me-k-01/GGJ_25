@@ -1,9 +1,9 @@
 [gd_scene load_steps=39 format=4 uid="uid://cc78shvcc1ep1"]
 
-[ext_resource type="MeshLibrary" uid="uid://cpxgsw4tsmabm" path="res://assets/ground_lib.tres" id="1_tsibw"]
-[ext_resource type="MeshLibrary" uid="uid://dksuhm4ie2ftm" path="res://assets/prop_lib.tres" id="2_oak2r"]
+[ext_resource type="MeshLibrary" uid="uid://b5wufnvi8mahd" path="res://assets/ground_lib.tres" id="1_tsibw"]
+[ext_resource type="MeshLibrary" uid="uid://b6lll568yofw5" path="res://assets/prop_lib.tres" id="2_oak2r"]
 [ext_resource type="Texture2D" uid="uid://bm7sst0sqm0dd" path="res://assets/pirate_kit/Textures/colormap.png" id="3_kepb0"]
-[ext_resource type="PackedScene" uid="uid://b1ot6gn6tms6h" path="res://lesson_reference/player_3d_template.tscn" id="4_is3ql"]
+[ext_resource type="PackedScene" uid="uid://b1ot6gn6tms6h" path="res://player/player_3d_template.tscn" id="4_is3ql"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cdw8r"]
 resource_name = "colormap"

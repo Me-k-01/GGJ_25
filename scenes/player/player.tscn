@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bgpmouhwxfr2t"]
 
-[ext_resource type="PackedScene" uid="uid://b1ot6gn6tms6h" path="res://lesson_reference/player_3d_template.tscn" id="1_ydxld"]
+[ext_resource type="PackedScene" uid="uid://b1ot6gn6tms6h" path="res://player/player_3d_template.tscn" id="1_ydxld"]
 [ext_resource type="PackedScene" uid="uid://dwqm4i10twx1y" path="res://scenes/player/blower.tscn" id="2_gjdak"]
 [ext_resource type="Script" path="res://scripts/jumper.gd" id="3_yge6n"]
 
