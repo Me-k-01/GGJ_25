@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://cyngdpntlqlkm"]
+
+[ext_resource type="PackedScene" uid="uid://hdirp6r467n5" path="res://scenes/bubbles/bubble.tscn" id="1_ny480"]
+
+[node name="WaterBubble" instance=ExtResource("1_ny480")]
+mass = 0.5
+
+[node name="BubbleMesh" parent="." index="0"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="Bubble Collision" parent="." index="1"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)

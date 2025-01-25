@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://ikp043y7ypa3"]
+
+[ext_resource type="PackedScene" uid="uid://hdirp6r467n5" path="res://scenes/bubbles/bubble.tscn" id="1_arvxw"]
+
+[node name="AirBubble" groups=["air_bubble"] instance=ExtResource("1_arvxw")]
+mass = 0.25
+levitation_height = 2.0
+float_force = 2.0
+
+[node name="BubbleMesh" parent="." index="0"]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+
+[node name="Bubble Collision" parent="." index="1"]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)

@@ -21,8 +21,6 @@ shader_parameter/color_texture = ExtResource("2_toioc")
 
 [sub_resource type="SphereMesh" id="SphereMesh_cusqc"]
 
-[node name="Bubble" type="Node3D"]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="Bubble" type="MeshInstance3D"]
 material_override = SubResource("ShaderMaterial_6256q")
 mesh = SubResource("SphereMesh_cusqc")

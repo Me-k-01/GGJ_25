@@ -32,7 +32,7 @@ var _camera_input_direction := Vector2.ZERO
 ## the character model.
 @onready var _last_input_direction := global_basis.z
 # We store the initial position of the player to reset to it when the player falls off the map.
-@onready var _start_position := global_position
+#@onready var _start_position := global_position
 
 @onready var _camera_pivot: Node3D = %CameraPivot
 @onready var _camera: Camera3D = %Camera3D
@@ -72,6 +72,10 @@ func _unhandled_input(event: InputEvent) -> void:
 		_camera_input_direction.x = -event.relative.x * mouse_sensitivity
 		_camera_input_direction.y = -event.relative.y * mouse_sensitivity
 
+func jump(multiplier):
+	velocity.y += jump_impulse * multiplier
+	_skin.jump()
+	_jump_sound.play()
 
 func _physics_process(delta: float) -> void:
 	_camera_pivot.rotation.x += _camera_input_direction.y * delta
@@ -109,9 +113,7 @@ func _physics_process(delta: float) -> void:
 	var ground_speed := Vector2(velocity.x, velocity.z).length()
 	var is_just_jumping := Input.is_action_just_pressed("jump") and is_on_floor()
 	if is_just_jumping:
-		velocity.y += jump_impulse
-		_skin.jump()
-		_jump_sound.play()
+		jump(1)
 	elif not is_on_floor() and velocity.y < 0:
 		_skin.fall()
 	elif is_on_floor():
