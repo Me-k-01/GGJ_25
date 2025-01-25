@@ -14,7 +14,7 @@ script = ExtResource("1_xbgaq")
 [node name="BubbleMesh" parent="." instance=ExtResource("1_6qrw5")]
 material_override = ExtResource("3_kc2sn")
 
-[node name="Bubble Collision" type="CollisionShape3D" parent="."]
+[node name="BubbleCollision" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_y7q7m")
 
 [node name="RayCast3D" type="RayCast3D" parent="."]

@@ -4,11 +4,9 @@
 
 [node name="AirBubble" groups=["air_bubble"] instance=ExtResource("1_arvxw")]
 mass = 0.25
+lifetime = 10.0
 levitation_height = 2.0
 float_force = 2.0
 
 [node name="BubbleMesh" parent="." index="0"]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
-
-[node name="Bubble Collision" parent="." index="1"]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
