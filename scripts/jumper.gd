@@ -9,7 +9,8 @@ func _ready() -> void:
 	timer = time_between_jump
 
 func _process(delta: float) -> void:
-	if $"../../.".is_on_floor() : is_double_jumping = false
+	if $"../../.".is_on_floor() :
+		is_double_jumping = false
 	timer -= delta
 	
 	if timer <= 0 :
@@ -17,9 +18,12 @@ func _process(delta: float) -> void:
 		for i in range(get_collision_count()) :
 			var collider = get_collider(i)
 			if collider.is_in_group("air_bubble") :
-				if is_double_jumping : $"../../.".jump(2.25)
-				else : $"../../.".jump(1.5)
-				
+				if is_double_jumping :
+					$"../../.".is_double_jumping = true
+					$"../../.".jump(2.25)
+				else :
+					$"../../.".jump(1.5)
+					$"../../.".is_double_jumping = false
 				is_double_jumping = true
 				timer = time_between_jump
 				collider.queue_free()

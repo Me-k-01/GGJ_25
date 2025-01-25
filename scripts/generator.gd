@@ -38,4 +38,3 @@ func _process(delta: float) -> void:
 				instance = air_bubbles[0]
 				instance.lifetime_timer = instance.shrinking_time
 				air_bubbles.pop_front()
-				
