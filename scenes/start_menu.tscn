@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://5d0ocub2ghb8"]
 
 [ext_resource type="PackedScene" uid="uid://b4eocr666h0ok" path="res://scenes/test_level.tscn" id="1_f2qw3"]
-[ext_resource type="Script" path="res://scenes/start_menu.gd" id="2_b4e1c"]
+[ext_resource type="Script" path="res://scripts/start_menu.gd" id="2_b4e1c"]
 
 [sub_resource type="Theme" id="Theme_osbql"]
 
