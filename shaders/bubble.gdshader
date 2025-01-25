@@ -28,7 +28,7 @@ vec3 fresnel_glow(float amount, float intensity, vec3 color, vec3 normal, vec3 v
 
 void fragment()
 {
-	vec3 rainbow = texture(color_texture, VERTEX.xy * bubble_patern_scale + vec2(TIME * 0.1 * distortion_speed)).rgb;
+		vec3 rainbow = texture(color_texture, VERTEX.xy * bubble_patern_scale + vec2(TIME * 0.1 * distortion_speed)).rgb;
 
 	float basic_fresnel = fresnel(3.0, NORMAL, VIEW);
 
