@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cae287oyu054a"]
+[gd_scene load_steps=5 format=3 uid="uid://cae287oyu054a"]
 
 [ext_resource type="MeshLibrary" uid="uid://dksuhm4ie2ftm" path="res://assets/prop_lib.tres" id="1_4w8pe"]
 [ext_resource type="MeshLibrary" uid="uid://cpxgsw4tsmabm" path="res://assets/ground_lib.tres" id="2_vuydr"]
 [ext_resource type="PackedScene" uid="uid://bptxkdf10by2" path="res://assets/pirate_kit/ship-wreck.glb" id="3_r1j46"]
+[ext_resource type="PackedScene" uid="uid://b1ot6gn6tms6h" path="res://lesson_reference/player_3d_template.tscn" id="4_857p8"]
 
 [node name="TestFlo" type="Node3D"]
 
@@ -24,3 +25,15 @@ metadata/_editor_floor_ = Vector3(0, 0, 0)
 
 [node name="ship-wreck2" parent="." instance=ExtResource("3_r1j46")]
 transform = Transform3D(-0.359903, 0.160753, -0.919037, 0.21475, 0.972869, 0.0860709, 0.907939, -0.166386, -0.38466, 3.55248, -0.666651, 2.92795)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.330103, 0.943945, 0, -0.943945, 0.330103, 0, 5.07477, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, -0.0585223, 0.998286, 0, -0.998286, -0.0585223, -6.46312, 9.53674e-07, 3.94771)
+polygon = PackedVector2Array(2.41551, 0.41592)
+
+[node name="Player3DTemplate" parent="." instance=ExtResource("4_857p8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.13039, 1.28394, 0)

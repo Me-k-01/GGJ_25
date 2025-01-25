@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c3nehhx1yh4pi"]
+
+[ext_resource type="PackedScene" uid="uid://5au21ucakuvw" path="res://assets/cactus/cactus_small_1.tscn" id="1_4s4j8"]
+
+[node name="Cactus_Small_1" instance=ExtResource("1_4s4j8")]
+
+[node name="CollisionShape3D" parent="Cactus_Small_1" index="0"]
+disabled = true

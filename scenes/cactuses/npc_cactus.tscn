@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=3 uid="uid://dsksur4ir838y"]
+
+[ext_resource type="Script" path="res://scripts/cactus.gd" id="1_eddmp"]
+[ext_resource type="PackedScene" uid="uid://c3nehhx1yh4pi" path="res://scenes/cactuses/cactus_small_1.tscn" id="2_vid38"]
+[ext_resource type="Texture2D" uid="uid://bwkah8t6dykof" path="res://assets/googly_eyes/PNG/googly-d.png" id="3_lpv3n"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pqumu"]
+transparency = 1
+albedo_texture = ExtResource("3_lpv3n")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_fapfq"]
+material = SubResource("StandardMaterial3D_pqumu")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_l82tw"]
+
+[node name="Cactus" type="CharacterBody3D"]
+script = ExtResource("1_eddmp")
+
+[node name="Cactus_Small_1" parent="." instance=ExtResource("2_vid38")]
+transform = Transform3D(-1.47963e-07, 0, 3.385, 0, 3.385, 0, -3.385, 0, -1.47963e-07, 0, -0.303032, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Cactus_Small_1"]
+transform = Transform3D(-2.58265e-09, 0.0590842, 0, -0.0590842, -2.58265e-09, 0, 0, 0, 0.0590842, 0.181121, 0.220967, 0.0527666)
+mesh = SubResource("PlaneMesh_fapfq")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Cactus_Small_1"]
+transform = Transform3D(-2.58265e-09, 0.0590842, 0, -0.0590842, -2.58265e-09, 0, 0, 0, 0.0590842, 0.181121, 0.220967, -0.0502165)
+mesh = SubResource("PlaneMesh_fapfq")
+skeleton = NodePath("../..")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_l82tw")

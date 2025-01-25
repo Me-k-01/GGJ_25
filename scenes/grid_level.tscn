@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://7ga2w8sdx8pl"]
 
-[ext_resource type="MeshLibrary" uid="uid://b5wufnvi8mahd" path="res://assets/ground_lib.tres" id="1_lf6o2"]
+[ext_resource type="MeshLibrary" uid="uid://cpxgsw4tsmabm" path="res://assets/ground_lib.tres" id="1_lf6o2"]
 [ext_resource type="PackedScene" uid="uid://cutvc5v2bb24x" path="res://assets/grid1_meshes/block-grass-corner-low.glb" id="2_sw3v1"]
 
 [node name="GridLevel" type="Node3D"]
