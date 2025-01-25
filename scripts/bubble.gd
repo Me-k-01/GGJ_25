@@ -1,13 +1,30 @@
 extends RigidBody3D
 
+@export var lifetime = -1.0
+@export var shrinking_time = 1.0
 @export var levitation_height := 2.90
 @export var float_force := 5.0
 @export var drag := 0.05
 @export var angular_drag := 0.05
 
+var timer = 0.0
 var submerged := false
+var base_scale := Vector3.ZERO
 
-func _physics_process(_delta: float) -> void:	
+func _ready() -> void :
+	timer = lifetime
+	base_scale = $"BubbleMesh".scale
+
+func _process(delta : float) -> void :
+	if lifetime != -1 :
+		timer -= delta
+		if timer <= shrinking_time :
+			$"BubbleMesh".scale = base_scale * timer / shrinking_time
+			$"BubbleCollision".scale = base_scale * timer / shrinking_time
+		if timer <= 0 :
+			queue_free()
+
+func _physics_process(_delta: float) -> void:
 	submerged = true
 	
 	var ground_height := 0
@@ -27,3 +44,8 @@ func _integrate_forces(state: PhysicsDirectBodyState3D) -> void:
 	if submerged :
 		state.linear_velocity *= 1 - drag
 		state.angular_velocity *= 1 - angular_drag
+
+@warning_ignore("shadowed_variable_base_class")
+func move(position):
+	global_transform.origin = position
+	
