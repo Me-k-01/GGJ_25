@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=4 uid="uid://1cxmu46xml5d"]
+[gd_scene load_steps=46 format=4 uid="uid://1cxmu46xml5d"]
 
 [ext_resource type="MeshLibrary" uid="uid://b6lll568yofw5" path="res://assets/prop_lib.tres" id="1_ad1bd"]
 [ext_resource type="MeshLibrary" uid="uid://b5wufnvi8mahd" path="res://assets/ground_lib.tres" id="2_c4ax5"]
@@ -21,6 +21,7 @@
 [ext_resource type="Shader" uid="uid://ch78au2m2jhee" path="res://shaders/uv_shader_test.tres" id="21_pgqnj"]
 [ext_resource type="PackedScene" uid="uid://b5svsapmvnilg" path="res://assets/pirate_kit/tower-complete-small.glb" id="22_4ivgv"]
 [ext_resource type="Texture2D" uid="uid://cou4peya0bh0e" path="res://assets/textures_waterfall/waterfall_textures/waterfall_texture_colored.png" id="22_ih8xs"]
+[ext_resource type="PackedScene" uid="uid://bn7n25viqpfj7" path="res://assets/meshes/WizardTree.glb" id="23_3oy7y"]
 [ext_resource type="PackedScene" uid="uid://cxd520vcn5qon" path="res://assets/arena_kit/wall.glb" id="23_c16an"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_op5e2"]
@@ -553,7 +554,6 @@ transform = Transform3D(0.532241, 0, -0.846593, 0, 1, 0, 0.846593, 0, 0.532241, 
 transform = Transform3D(0.532241, 0, -0.846593, 0, 1, 0, 0.846593, 0, 0.532241, -32.1322, -0.0132906, -93.4478)
 
 [node name="Castle" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.51094, 0, 0)
 
 [node name="tower-complete-small2" parent="Castle" instance=ExtResource("22_4ivgv")]
 transform = Transform3D(4.19329, 0, 0, 0, 4.19329, 0, 0, 0, 4.19329, -231.9, 0.75, -115.982)
@@ -710,3 +710,6 @@ omni_attenuation = -0.9
 transform = Transform3D(-0.95218, -0.19791, 0.232777, -0.0937825, 0.914395, 0.39381, -0.290789, 0.353147, -0.889229, -1.2737, 28.176, -13.3814)
 light_color = Color(1, 0.8955, 0.67, 1)
 light_energy = 0.6
+
+[node name="WizardTree3" parent="." instance=ExtResource("23_3oy7y")]
+transform = Transform3D(-1.5384, 0, -0.366356, 0, 1.58142, 0, 0.366356, 0, -1.5384, -3.91621, -0.234635, 62.4486)
