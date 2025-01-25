@@ -36,7 +36,7 @@ func _physics_process(_delta: float) -> void:
 	var ground_height := 0
 	var collider = $RayCast3D.get_collider()
 	if collider != null :
-		ground_height = collider.global_position.y + levitation_height
+		ground_height = $RayCast3D.get_collision_point().y + levitation_height
 	
 	var depth = ground_height - global_position.y
 	var force = Vector3.ZERO

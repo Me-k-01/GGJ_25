@@ -12,6 +12,6 @@ func _process(_delta: float) -> void:
 			var collider = get_collider(i)
 			if collider.is_in_group("bubble"):
 				var force = (collider.global_transform.origin - player.global_transform.origin)
-				#force = Vector3(force.x, 0, force.z)
+				force = Vector3(force.x, force.y / 10, force.z)
 				force = force.normalized() * 100
 				collider.apply_central_force(force)

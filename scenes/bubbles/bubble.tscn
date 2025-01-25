@@ -18,4 +18,3 @@ material_override = ExtResource("3_kc2sn")
 shape = SubResource("SphereShape3D_y7q7m")
 
 [node name="RayCast3D" type="RayCast3D" parent="."]
-target_position = Vector3(0, -10, 0)

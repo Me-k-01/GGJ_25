@@ -136,9 +136,7 @@ func _physics_process(delta: float) -> void:
 	_was_on_floor_last_frame = is_on_floor()
 	
 	if !is_double_jumping :
-		print("basic jumping")
 		if velocity.y >= max_velocity : velocity.y = max_velocity
 	else :
-		print("double jumping")
 		if velocity.y >= double_jump_max_velocity : velocity.y = double_jump_max_velocity
 	move_and_slide()
