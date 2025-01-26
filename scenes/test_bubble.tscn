@@ -11,7 +11,12 @@
 [node name="MapBubble" type="Node3D"]
 
 [node name="AutomaticGenerator" parent="." instance=ExtResource("1_spk6u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -9)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -9)
+map_path = NodePath("..")
+delay = 11.0
+
+[node name="AutomaticGenerator2" parent="." instance=ExtResource("1_spk6u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -7)
 map_path = NodePath("..")
 
 [node name="Bubble" parent="." instance=ExtResource("1_rqxtj")]

@@ -7,13 +7,17 @@ extends RigidBody3D
 @export var float_force := 5.0
 @export var drag := 0.05
 @export var angular_drag := 0.05
+@export var is_hot_bubble := false
 
-var generation_timer = 0.0 
+
+var start_y = 0.0
+var generation_timer = 0.0
 var lifetime_timer = 0.0
 var submerged := false
 var base_scale := Vector3.ZERO
 
 func _ready() -> void :
+	start_y = global_transform.origin.y
 	lifetime_timer = lifetime
 	base_scale = $"BubbleMesh".scale
 
@@ -37,6 +41,8 @@ func _physics_process(_delta: float) -> void:
 	var collider = $RayCast3D.get_collider()
 	if collider != null :
 		ground_height = $RayCast3D.get_collision_point().y + levitation_height
+	if is_hot_bubble :
+		ground_height = start_y
 	
 	var depth = ground_height - global_position.y
 	var force = Vector3.ZERO
@@ -54,4 +60,4 @@ func _integrate_forces(state: PhysicsDirectBodyState3D) -> void:
 @warning_ignore("shadowed_variable_base_class")
 func move(position):
 	global_transform.origin = position
-	
+	start_y = position.y

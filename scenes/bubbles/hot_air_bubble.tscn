@@ -1,0 +1,80 @@
+[gd_scene load_steps=7 format=3 uid="uid://diasjl54ajrmx"]
+
+[ext_resource type="PackedScene" uid="uid://hdirp6r467n5" path="res://scenes/bubbles/bubble.tscn" id="1_8o865"]
+[ext_resource type="Texture2D" uid="uid://1wioirrgd747" path="res://assets/textures/bubble_texture.jpg" id="2_ugeot"]
+
+[sub_resource type="Shader" id="Shader_47lug"]
+code = "shader_type spatial;
+render_mode cull_disabled;
+
+uniform sampler2D noise_texture; // Displacement noise
+uniform sampler2D color_texture; // Rainbow color of the bubble
+uniform float bubble_patern_scale  : hint_range(0.1, 1.0, 0.01);
+uniform float distortion_smoothness  : hint_range(0.0, 1.0, 0.01); // Scale
+uniform float distortion_power  : hint_range(0.0, 1.0, 0.01);
+uniform float distortion_speed  : hint_range(0.0, 1.0, 0.01);
+uniform vec4 base_color : source_color = vec4(1.0);
+
+varying vec3 world_position;
+
+void vertex() {
+	world_position = (MODEL_MATRIX * vec4(VERTEX, 1.0)).xyz;
+	float height = texture(noise_texture, VERTEX.xz * distortion_smoothness + vec2(TIME * 0.1 * distortion_speed)).r;
+	VERTEX += NORMAL * height * distortion_power;
+}
+float fresnel(float amount, vec3 normal, vec3 view)
+{
+	return pow((1.0 - clamp(dot(normalize(normal), normalize(view)), 0.0, 1.0 )), amount);
+}
+vec3 fresnel_glow(float amount, float intensity, vec3 color, vec3 normal, vec3 view)
+{
+	return pow((1.0 - dot(normalize(normal), normalize(view))), amount) * color * intensity;
+}
+
+
+void fragment()
+{
+		vec3 rainbow = texture(color_texture, VERTEX.xy * bubble_patern_scale + vec2(TIME * 0.1 * distortion_speed)).rgb;
+
+	float basic_fresnel = fresnel(3.0, NORMAL, VIEW);
+
+	vec3 fresnel = fresnel_glow(4.0, 4.5, base_color.rgb, NORMAL, VIEW);
+	ALPHA = basic_fresnel + 0.1f;
+	ALBEDO = (base_color.rgb + fresnel)*rainbow;
+	ROUGHNESS = 0.0f;
+}
+
+ //
+//
+//void light() {
+	 ////Called for every pixel for every light affecting the material.
+	 ////Uncomment to replace the default light processing function with this one.
+//}
+"
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_4rc4x"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_8xmus"]
+noise = SubResource("FastNoiseLite_4rc4x")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ka8be"]
+render_priority = 0
+shader = SubResource("Shader_47lug")
+shader_parameter/bubble_patern_scale = 0.17
+shader_parameter/distortion_smoothness = 0.06
+shader_parameter/distortion_power = 0.1
+shader_parameter/distortion_speed = 0.51
+shader_parameter/base_color = Color(1, 0.827451, 0.631373, 1)
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_8xmus")
+shader_parameter/color_texture = ExtResource("2_ugeot")
+
+[node name="HotAirBubble" groups=["air_bubble"] instance=ExtResource("1_8o865")]
+mass = 0.25
+lifetime = 10.0
+levitation_height = 2.0
+float_force = 2.0
+is_hot_bubble = true
+
+[node name="BubbleMesh" parent="." index="0"]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+material_override = SubResource("ShaderMaterial_ka8be")
