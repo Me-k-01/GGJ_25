@@ -716,5 +716,5 @@ transform = Transform3D(-0.576675, 0, -0.816974, 0, 1, 0, 0.816974, 0, -0.576675
 transform = Transform3D(14.3204, 0, -37.3487, 0, 40, 0, 37.3487, 0, 14.3204, -144.443, -2.53154, -17.7754)
 
 [node name="Crate_bottles" parent="." instance=ExtResource("24_we74p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.4283, 1.3924, -11.6811)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.9344, 6.00551, -34.0451)
 map_path = NodePath("..")

@@ -1,7 +1,5 @@
 extends StaticBody3D
-
-var map = null
-@export var map_path : NodePath
+  
 @export var max_bubbles := 1
 @export var cooldown := 5
 @export var bubble_lifetime := 4
@@ -9,17 +7,19 @@ var map = null
 @export var power := 200
 
 var is_on_cooldown = false
-var timer = 0.0
-var delay_timer = 0.0
+var timer = 0
+var delay_timer = 0
 
-var air_bubble = load("res://scenes/bubbles/hot_air_bubble.tscn")
+var map_root = null
+
+@export var air_bubble := load("res://scenes/bubbles/hot_air_bubble.tscn")
 var air_bubbles = []
 var new_air_bubbles = []
 
-func _ready() -> void:
-	map = get_node(map_path)
+func _ready() -> void: 
 	timer = cooldown
 	delay_timer = delay
+	map_root = get_tree().root
 
 func _process(delta: float) -> void:
 	delay_timer -= delta
@@ -31,7 +31,7 @@ func _process(delta: float) -> void:
 			var instance = air_bubble.instantiate()
 
 			instance.lifetime = bubble_lifetime
-			map.add_child(instance)
+			map_root.add_child(instance)
 			instance.move($"SpawnPosition".global_transform.origin)
 			var force = (instance.global_transform.origin - global_transform.origin)
 			#force = Vector3(force.x, 0, force.z)
