@@ -123,7 +123,7 @@ theme_override_colors/font_color = Color(0.443137, 0, 0.454902, 1)
 theme_override_colors/font_shadow_color = Color(0.513726, 0.439216, 0.298039, 0.231373)
 text = "CONTROLS 
 - ZQSD / WASD  :  Move your character
-- Space : Jump (on bubbles or not)
+- Space : Jump
 - Left Click :  Spawn a bubble
 "
 
