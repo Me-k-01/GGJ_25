@@ -2,7 +2,7 @@
 
 [ext_resource type="Shader" path="res://shaders/interactible.gdshader" id="1_tr4cy"]
 [ext_resource type="Texture2D" uid="uid://bm7sst0sqm0dd" path="res://assets/pirate_kit/Textures/colormap.png" id="2_depxa"]
-[ext_resource type="Script" path="res://Interact/wine_bubble_interactible.gd" id="3_56qnw"]
+[ext_resource type="Script" path="res://interact/wine_bubble_interactible.gd" id="3_56qnw"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_foiwu"]
 

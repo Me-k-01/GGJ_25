@@ -1,9 +1,10 @@
 [gd_scene load_steps=2 format=3 uid="uid://bdx355gjl5rt8"]
 
-[ext_resource type="Script" path="res://Interact/interact_ray.gd" id="1_4b34v"]
+[ext_resource type="Script" path="res://interact/interact_ray.gd" id="1_4b34v"]
 
 [node name="InteractRay" type="RayCast3D"]
 target_position = Vector3(0, 0, -4)
+collision_mask = 9
 script = ExtResource("1_4b34v")
 
 [node name="Prompt" type="Label" parent="."]

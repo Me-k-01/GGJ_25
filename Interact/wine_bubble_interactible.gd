@@ -1,4 +1,4 @@
-extends "res://Interact/interactable.gd"
+extends "res://interact/interactable.gd"
 
 var map = null
 var instance = null

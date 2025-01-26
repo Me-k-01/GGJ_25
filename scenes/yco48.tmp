@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://csfjo1uysudxt"]
+
+[ext_resource type="Script" path="res://Interact/ladder.gd" id="1_hrn76"]
+[ext_resource type="PackedScene" uid="uid://1cxmu46xml5d" path="res://scenes/garden_level_v2.tscn" id="1_rg8sn"]
+[ext_resource type="Environment" uid="uid://bt858ghsvw42j" path="res://assets/environment.tres" id="2_0qb0v"]
+[ext_resource type="CameraAttributesPractical" uid="uid://dpxcsqx1yg1ok" path="res://assets/camera_attributes_practical.tres" id="3_ew7hq"]
+[ext_resource type="PackedScene" uid="uid://bgpmouhwxfr2t" path="res://scenes/player/player.tscn" id="4_e0hry"]
+[ext_resource type="PackedScene" uid="uid://bynfhihlyqtf5" path="res://assets/interactable_objects/ladder.tscn" id="5_hvtoa"]
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_hrn76")
+
+[node name="GardenLevel" parent="." instance=ExtResource("1_rg8sn")]
+transform = Transform3D(-0.20359, 0, 0.979056, 0, 1, 0, -0.979056, 0, -0.20359, 0, 0, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("2_0qb0v")
+camera_attributes = ExtResource("3_ew7hq")
+
+[node name="Player" parent="." instance=ExtResource("4_e0hry")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.94268, 1.54852, 3.03741)
+
+[node name="Generator" parent="Player/SophiaSkin" index="4"]
+map_path = NodePath("../../..")
+
+[node name="SpringArm3D" parent="Player/CameraPivot" index="0"]
+collision_mask = 4
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.0955686, 0.754539, -0.649259, -0.210865, 0.652788, 0.727602, 0.972832, 0.06737, 0.221492, 0, 7.86021, 0)
+light_color = Color(1, 0.6425, 0.35, 1)
+shadow_enabled = true
+
+[node name="ladder" parent="." instance=ExtResource("5_hvtoa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.6034, 0.878944, 35.5575)
+
+[editable path="Player"]
