@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://5d0ocub2ghb8"]
+[gd_scene load_steps=7 format=3 uid="uid://5d0ocub2ghb8"]
 
-[ext_resource type="PackedScene" uid="uid://7s1pgtr1bj4n" path="res://scenes/garden_level.tscn" id="2_5c7tb"]
+[ext_resource type="PackedScene" uid="uid://b44k7uy3u7j4h" path="res://scenes/garden_level.tscn" id="2_5c7tb"]
 [ext_resource type="Script" path="res://scripts/start_menu.gd" id="2_b4e1c"]
+[ext_resource type="Environment" uid="uid://bt858ghsvw42j" path="res://assets/environment.tres" id="3_eh62d"]
+[ext_resource type="CameraAttributesPractical" uid="uid://dpxcsqx1yg1ok" path="res://assets/camera_attributes_practical.tres" id="4_pcofq"]
 
 [sub_resource type="Theme" id="Theme_osbql"]
 
@@ -106,6 +108,15 @@ text = "Quit
 "
 
 [node name="GardenLevel" parent="." instance=ExtResource("2_5c7tb")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="GardenLevel"]
+environment = ExtResource("3_eh62d")
+camera_attributes = ExtResource("4_pcofq")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="GardenLevel"]
+transform = Transform3D(0.0955686, 0.754539, -0.649259, -0.210865, 0.652788, 0.727602, 0.972832, 0.06737, 0.221492, 0, 7.86021, 0)
+light_color = Color(1, 0.6425, 0.35, 1)
+shadow_enabled = true
 
 [connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/Start_Button" to="Menu" method="_on_start_pressed"]
 [connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/Credits_Button" to="Menu" method="_on_credits_pressed"]

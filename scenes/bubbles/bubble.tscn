@@ -8,7 +8,7 @@
 
 [node name="Bubble" type="RigidBody3D" groups=["bubble"]]
 collision_layer = 3
-mass = 0.001
+mass = 0.25
 script = ExtResource("1_xbgaq")
 
 [node name="BubbleMesh" parent="." instance=ExtResource("1_6qrw5")]
