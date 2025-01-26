@@ -12,11 +12,11 @@ uniform vec2 eye_center = vec2(0.5, 0.5); // Center of the googly eye in UV spac
 uniform bool teary_eye;
 float bnoise( in float x )
 {
-    // setup    
+    // setup
     float i = floor(x);
     float f = fract(x);
     float s = sign(fract(x/2.0)-0.5);
-    
+
     // use some hash to create a random value k in [0..1] from i
   //float k = hash(uint(i));
   //float k = 0.5+0.5*sin(i);
@@ -24,10 +24,10 @@ float bnoise( in float x )
 
     // quartic polynomial
     return s*f*(f-1.0)*((16.0*k-4.0)*f*(f-1.0)-1.0);
-} 
+}
 
 void vertex() {
-	// Called for every vertex the material is visible on. 
+	// Called for every vertex the material is visible on.
 	//world_position = (MODEL_MATRIX * vec4(VERTEX, 1.0)).xyz;
     world_position = (MODEL_MATRIX * vec4(VERTEX, 1.0)).xyz;
 	//world_position = (MODELVIEW_NORMAL_MATRIX * (VERTEX)).xyz;
@@ -35,14 +35,14 @@ void vertex() {
 }
 
 void fragment() {
-	// Called for every pixel the material is visible on. 
+	// Called for every pixel the material is visible on.
 	//ALBEDO = vec3(1.0);
 	//vec3 iris = texture(iris_eye_texture, vec2((VIEW).xy) * 5.0 ).rgb;
-	 
-	
+
+
 	float iris; vec3 eye_back; vec3 light_eye_back;
-	
-	if (teary_eye) { 
+
+	if (teary_eye) {
 	    float offset_x = sin(TIME * 2.0 + UV.y * 10.0) * 0.05;
 	    float offset_y = cos(TIME * 2.0 + UV.x * 10.0) * 0.05;
 
@@ -51,14 +51,14 @@ void fragment() {
 		iris = texture(iris_eye_texture, teary_eye_uv ).r;
 		eye_back = texture(back_eye_texture, teary_eye_uv   ).rgb;
 		light_eye_back = texture(light_eye_texture, teary_eye_uv   ).rgb;
-	} else { 
+	} else {
 	    //float offset_x = sin(TIME * speed ) * jiggle_intensity;
 	    //float offset_y = cos(TIME * speed ) * jiggle_intensity;
 	    float offset_x = sin((TIME * speed )) * jiggle_intensity;
 	    float offset_y = cos((TIME * speed )) * jiggle_intensity;
-		 
+
 	    vec2 jiggle_eye_uv = UV + vec2(offset_x, offset_y) ;
- 
+
 		iris = texture(iris_eye_texture, jiggle_eye_uv ).r;
 		eye_back = texture(back_eye_texture, UV   ).rgb;
 		light_eye_back = texture(light_eye_texture, UV   ).rgb;

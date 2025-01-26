@@ -24,6 +24,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.47822, 23.068)
 [node name="Generator" parent="Player/SophiaSkin" index="4"]
 map_path = NodePath("../../..")
 
+[node name="SpringArm3D" parent="Player/CameraPivot" index="0"]
+collision_mask = 4
+
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.0955686, 0.754539, -0.649259, -0.210865, 0.652788, 0.727602, 0.972832, 0.06737, 0.221492, 0, 7.86021, 0)
 light_color = Color(1, 0.6425, 0.35, 1)
