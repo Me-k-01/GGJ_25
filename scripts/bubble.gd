@@ -37,7 +37,7 @@ func _process(delta : float) -> void :
 func _physics_process(_delta: float) -> void:
 	submerged = true
 	
-	var ground_height := 0
+	var ground_height := 0.0
 	var collider = $RayCast3D.get_collider()
 	if collider != null :
 		ground_height = $RayCast3D.get_collision_point().y + levitation_height
@@ -46,7 +46,7 @@ func _physics_process(_delta: float) -> void:
 	
 	var depth = ground_height - global_position.y
 	var force = Vector3.ZERO
-	if depth > 0 :
+	if depth > 0.0 :
 		submerged = true
 		force = (- Vector3.UP * float_force * get_gravity() * depth)
 		#if force.y > 20 : force.y = 20
@@ -54,8 +54,8 @@ func _physics_process(_delta: float) -> void:
 
 func _integrate_forces(state: PhysicsDirectBodyState3D) -> void:
 	if submerged :
-		state.linear_velocity *= 1 - drag
-		state.angular_velocity *= 1 - angular_drag
+		state.linear_velocity *= 1.0 - drag
+		state.angular_velocity *= 1.0 - angular_drag
 
 @warning_ignore("shadowed_variable_base_class")
 func move(position):
