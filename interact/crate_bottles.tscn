@@ -1,24 +1,25 @@
-[gd_scene load_steps=9 format=4 uid="uid://dvf4u6io5o6xs"]
+[gd_scene load_steps=10 format=4 uid="uid://c44y42m75a7j5"]
 
-[ext_resource type="Shader" path="res://shaders/interactible.gdshader" id="1_tr4cy"]
-[ext_resource type="Texture2D" uid="uid://bm7sst0sqm0dd" path="res://assets/pirate_kit/Textures/colormap.png" id="2_depxa"]
-[ext_resource type="Script" path="res://interact/wine_bubble_interactible.gd" id="3_56qnw"]
+[ext_resource type="Shader" path="res://shaders/interactible.gdshader" id="1_ib0u0"]
+[ext_resource type="Script" path="res://interact/crate_bottles.gd" id="1_mvahg"]
+[ext_resource type="Texture2D" uid="uid://bm7sst0sqm0dd" path="res://assets/pirate_kit/Textures/colormap.png" id="2_aaavl"]
+[ext_resource type="PackedScene" uid="uid://cyngdpntlqlkm" path="res://scenes/bubbles/water_bubble.tscn" id="2_wsqv4"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_foiwu"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3ddh2"]
 render_priority = 0
-shader = ExtResource("1_tr4cy")
+shader = ExtResource("1_ib0u0")
 shader_parameter/spin_speed = 1.0
 shader_parameter/bounce_amplitude = 0.5
 shader_parameter/bounce_frequency = 1.0
 shader_parameter/base_color = Color(1, 0.679, 0.23, 1)
-shader_parameter/asset_texture = ExtResource("2_depxa")
+shader_parameter/asset_texture = ExtResource("2_aaavl")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7luoo"]
 resource_name = "colormap"
 cull_mode = 2
-albedo_texture = ExtResource("2_depxa")
+albedo_texture = ExtResource("2_aaavl")
 texture_filter = 2
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_wv3y0"]
@@ -55,8 +56,10 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_wv3y0")
 
-[node name="StaticBody3D" type="StaticBody3D"]
-script = ExtResource("3_56qnw")
+[node name="Crate_bottles" type="StaticBody3D"]
+script = ExtResource("1_mvahg")
+bubble = ExtResource("2_wsqv4")
+prompt_message = "Bubble the wine"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0545921, 0.208061, 0.00933075)

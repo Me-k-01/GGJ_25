@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://benjhbbexwtd4"]
+[gd_scene load_steps=14 format=3 uid="uid://b1ot6gn6tms6h"]
 
 [ext_resource type="Script" path="res://player/player_3d_template.gd" id="1_dpokc"]
 [ext_resource type="PackedScene" uid="uid://prh35jb6tjtd" path="res://player/sophia_skin/sophia_skin.tscn" id="2_4dj54"]
@@ -75,9 +75,8 @@ explosiveness = 0.05
 process_material = SubResource("ParticleProcessMaterial_tqdcj")
 draw_pass_1 = SubResource("SphereMesh_vpbss")
 
-[node name="InteractRay" parent="SophiaSkin" instance=ExtResource("6_neu2n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.09401, 2.40139)
-target_position = Vector3(0, 0, -2)
+[node name="InteractRay2" parent="SophiaSkin" instance=ExtResource("6_neu2n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.10866, 2.39402)
 
 [node name="LandingSound" type="AudioStreamPlayer3D" parent="."]
 unique_name_in_owner = true

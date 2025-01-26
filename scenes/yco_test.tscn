@@ -4,7 +4,7 @@
 [ext_resource type="Environment" uid="uid://bt858ghsvw42j" path="res://assets/environment.tres" id="2_0qb0v"]
 [ext_resource type="CameraAttributesPractical" uid="uid://dpxcsqx1yg1ok" path="res://assets/camera_attributes_practical.tres" id="3_ew7hq"]
 [ext_resource type="PackedScene" uid="uid://bgpmouhwxfr2t" path="res://scenes/player/player.tscn" id="4_e0hry"]
-[ext_resource type="PackedScene" uid="uid://bynfhihlyqtf5" path="res://assets/interactable_objects/ladder.tscn" id="5_hvtoa"]
+[ext_resource type="PackedScene" uid="uid://bynfhihlyqtf5" path="res://assets/Interactable_objects/ladder.tscn" id="5_hvtoa"]
 
 [node name="Node3D" type="Node3D"]
 

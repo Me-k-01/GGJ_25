@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=4 uid="uid://1cxmu46xml5d"]
+[gd_scene load_steps=47 format=4 uid="uid://1cxmu46xml5d"]
 
 [ext_resource type="MeshLibrary" uid="uid://b6lll568yofw5" path="res://assets/prop_lib.tres" id="1_ad1bd"]
 [ext_resource type="MeshLibrary" uid="uid://b5wufnvi8mahd" path="res://assets/ground_lib.tres" id="2_c4ax5"]
@@ -22,9 +22,8 @@
 [ext_resource type="Texture2D" uid="uid://cou4peya0bh0e" path="res://assets/textures_waterfall/waterfall_textures/waterfall_texture_colored.png" id="22_ih8xs"]
 [ext_resource type="PackedScene" uid="uid://bn7n25viqpfj7" path="res://assets/meshes/WizardTree.glb" id="23_3oy7y"]
 [ext_resource type="PackedScene" uid="uid://cxd520vcn5qon" path="res://assets/arena_kit/wall.glb" id="23_c16an"]
-[ext_resource type="PackedScene" uid="uid://dvf4u6io5o6xs" path="res://interact/crate_bottles.tscn" id="23_mo31s"]
 [ext_resource type="PackedScene" uid="uid://bt3wn3h5tjsmi" path="res://assets/grid1_meshes/door-large-open.glb" id="24_kseop"]
-[ext_resource type="PackedScene" uid="uid://cyngdpntlqlkm" path="res://scenes/bubbles/water_bubble.tscn" id="26_kblww"]
+[ext_resource type="PackedScene" uid="uid://c44y42m75a7j5" path="res://interact/crate_bottles.tscn" id="24_we74p"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_op5e2"]
 resource_name = "colormap"
@@ -716,7 +715,6 @@ transform = Transform3D(-0.576675, 0, -0.816974, 0, 1, 0, 0.816974, 0, -0.576675
 [node name="door-large-open2" parent="." instance=ExtResource("24_kseop")]
 transform = Transform3D(14.3204, 0, -37.3487, 0, 40, 0, 37.3487, 0, 14.3204, -144.443, -2.53154, -17.7754)
 
-[node name="StaticBody3D" parent="." instance=ExtResource("23_mo31s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.4845, 1.32234, -9.77347)
+[node name="Crate_bottles" parent="." instance=ExtResource("24_we74p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.4283, 1.3924, -11.6811)
 map_path = NodePath("..")
-bubble = ExtResource("26_kblww")
