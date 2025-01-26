@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://b1ot6gn6tms6h"]
+[gd_scene load_steps=14 format=3 uid="uid://benjhbbexwtd4"]
 
 [ext_resource type="Script" path="res://player/player_3d_template.gd" id="1_dpokc"]
 [ext_resource type="PackedScene" uid="uid://prh35jb6tjtd" path="res://player/sophia_skin/sophia_skin.tscn" id="2_4dj54"]

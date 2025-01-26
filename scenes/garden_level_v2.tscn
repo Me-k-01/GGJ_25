@@ -23,7 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://bn7n25viqpfj7" path="res://assets/meshes/WizardTree.glb" id="23_3oy7y"]
 [ext_resource type="PackedScene" uid="uid://cxd520vcn5qon" path="res://assets/arena_kit/wall.glb" id="23_c16an"]
 [ext_resource type="PackedScene" uid="uid://bt3wn3h5tjsmi" path="res://assets/grid1_meshes/door-large-open.glb" id="24_kseop"]
-[ext_resource type="PackedScene" uid="uid://c44y42m75a7j5" path="res://interact/crate_bottles.tscn" id="24_we74p"]
+[ext_resource type="PackedScene" uid="uid://dvf4u6io5o6xs" path="res://interact/crate_bottles.tscn" id="24_we74p"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_op5e2"]
 resource_name = "colormap"

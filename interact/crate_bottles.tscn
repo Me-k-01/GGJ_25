@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://c44y42m75a7j5"]
+[gd_scene load_steps=10 format=4 uid="uid://dvf4u6io5o6xs"]
 
 [ext_resource type="Shader" path="res://shaders/interactible.gdshader" id="1_ib0u0"]
 [ext_resource type="Script" path="res://interact/crate_bottles.gd" id="1_mvahg"]

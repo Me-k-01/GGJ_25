@@ -36,6 +36,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.47822, -0.247829)
 [node name="Generator" parent="Player/SophiaSkin" index="4"]
 map_path = NodePath("../../..")
 
+[node name="InteractRay" parent="Player/SophiaSkin" index="8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.09401, 2.40139)
+target_position = Vector3(0, 0, -2)
+
 [node name="SpringArm3D" parent="Player/CameraPivot" index="0"]
 collision_mask = 4
 

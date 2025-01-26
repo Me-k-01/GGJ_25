@@ -4,7 +4,7 @@
 [ext_resource type="Environment" uid="uid://bt858ghsvw42j" path="res://assets/environment.tres" id="2_0qb0v"]
 [ext_resource type="CameraAttributesPractical" uid="uid://dpxcsqx1yg1ok" path="res://assets/camera_attributes_practical.tres" id="3_ew7hq"]
 [ext_resource type="PackedScene" uid="uid://bgpmouhwxfr2t" path="res://scenes/player/player.tscn" id="4_e0hry"]
-[ext_resource type="PackedScene" uid="uid://bynfhihlyqtf5" path="res://assets/Interactable_objects/ladder.tscn" id="5_hvtoa"]
+[ext_resource type="PackedScene" uid="uid://bynfhihlyqtf5" path="res://assets/interactable_objects/ladder.tscn" id="5_hvtoa"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -30,6 +30,6 @@ light_color = Color(1, 0.6425, 0.35, 1)
 shadow_enabled = true
 
 [node name="ladder" parent="." instance=ExtResource("5_hvtoa")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.6034, 0.878944, 35.5575)
+transform = Transform3D(-1.98585, 0, 0.850645, 0, 2.16037, 0, -0.850645, 0, -1.98585, -25.4377, 0.897227, 36.5871)
 
 [editable path="Player"]
