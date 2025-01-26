@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cwdsfrijytqev" path="res://scenes/bubbles/bubble_mesh.tscn" id="2_h2tab"]
 [ext_resource type="Material" uid="uid://e6qdhowqooeo" path="res://assets/materials/waterfall_texture.tres" id="3_txc75"]
 
-[node name="WaterBubble" instance=ExtResource("1_ny480")]
+[node name="WaterBubble" groups=["water bubble"] instance=ExtResource("1_ny480")]
 mass = 0.5
 levitation_height = 2.2
 
