@@ -19,11 +19,15 @@ func _process(delta: float) -> void:
    
 
 func _on_interacted(body: Variant) -> void:  
-	print("test")
+	print(global_transform.origin)
 	if instance != null :
-		instance.lifetime_timer = 1
+		instance.lifetime = 3
 		#instance.lifetime_timer = instance.shrinking_time
 		#instance.pop_front()
 	
 	instance = bubble.instantiate()
-	map.add_child(instance)
+	#instance.move(global_transform.origin)
+	#map.add_child(instance)
+	add_child(instance) 
+	instance.global_position = self.global_position
+	print(instance)
