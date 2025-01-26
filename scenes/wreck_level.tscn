@@ -1,8 +1,9 @@
-[gd_scene load_steps=38 format=4 uid="uid://cc78shvcc1ep1"]
+[gd_scene load_steps=39 format=4 uid="uid://cc78shvcc1ep1"]
 
 [ext_resource type="MeshLibrary" uid="uid://b5wufnvi8mahd" path="res://assets/ground_lib.tres" id="1_4fafj"]
 [ext_resource type="MeshLibrary" uid="uid://b6lll568yofw5" path="res://assets/prop_lib.tres" id="2_pbcyy"]
 [ext_resource type="Texture2D" uid="uid://bm7sst0sqm0dd" path="res://assets/pirate_kit/Textures/colormap.png" id="3_rfkyh"]
+[ext_resource type="PackedScene" uid="uid://fh5gd7bm5sr0" path="res://interact/barrel.tscn" id="4_wfo37"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cdw8r"]
 resource_name = "colormap"
@@ -661,3 +662,7 @@ skeleton = NodePath("")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ship-wreck/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 1.49012e-08, 0, 7.45058e-09, 1, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_u23iv")
+
+[node name="barrel" parent="." instance=ExtResource("4_wfo37")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68.8, 3.44928, 42.642)
+prompt_message = "Bubble the water"

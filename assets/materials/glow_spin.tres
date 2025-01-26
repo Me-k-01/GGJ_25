@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://bh6e3k0scfv7k"]
+
+[ext_resource type="Shader" path="res://shaders/interactible.gdshader" id="1_ixtc7"]
+[ext_resource type="Texture2D" uid="uid://bm7sst0sqm0dd" path="res://assets/pirate_kit/Textures/colormap.png" id="2_s77oh"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_ixtc7")
+shader_parameter/spin_speed = 1.0
+shader_parameter/bounce_amplitude = 0.5
+shader_parameter/bounce_frequency = 1.0
+shader_parameter/base_color = Color(1, 0.679, 0.23, 1)
+shader_parameter/asset_texture = ExtResource("2_s77oh")

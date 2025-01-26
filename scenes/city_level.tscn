@@ -1,9 +1,11 @@
-[gd_scene load_steps=13 format=4 uid="uid://botx5x6vew21c"]
+[gd_scene load_steps=15 format=4 uid="uid://botx5x6vew21c"]
 
 [ext_resource type="MeshLibrary" uid="uid://b5wufnvi8mahd" path="res://assets/ground_lib.tres" id="1_c8366"]
 [ext_resource type="MeshLibrary" uid="uid://b6lll568yofw5" path="res://assets/prop_lib.tres" id="2_wgkvm"]
 [ext_resource type="Texture2D" uid="uid://c15gqnlua6w11" path="res://assets/castle_kit/Textures/colormap.png" id="4_c5rbc"]
 [ext_resource type="Texture2D" uid="uid://di4th5bmaivkl" path="res://assets/grid1_meshes/Textures/colormap.png" id="4_itrnv"]
+[ext_resource type="PackedScene" uid="uid://dgg8s5tnhr2sg" path="res://scenes/automatic_generator/automatic_generator.tscn" id="5_1gfw0"]
+[ext_resource type="PackedScene" uid="uid://fh5gd7bm5sr0" path="res://interact/barrel.tscn" id="6_hdita"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iwvse"]
 resource_name = "colormap"
@@ -150,3 +152,30 @@ collision_mask = 5
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-moving/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_8nd4v")
+
+[node name="AutomaticGenerator" parent="." instance=ExtResource("5_1gfw0")]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -9.21416, 2.93, -42.718)
+delay = 12.0
+power = 280
+
+[node name="AutomaticGenerator2" parent="." instance=ExtResource("5_1gfw0")]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -6.1309, 2.93, -42.718)
+delay = 11.5
+power = 260
+
+[node name="AutomaticGenerator3" parent="." instance=ExtResource("5_1gfw0")]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -6.1309, 2.93, -39.3232)
+delay = 11.0
+power = 240
+
+[node name="AutomaticGenerator4" parent="." instance=ExtResource("5_1gfw0")]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -6.1309, 2.93, -35.5821)
+delay = 10.5
+power = 220
+
+[node name="AutomaticGenerator5" parent="." instance=ExtResource("5_1gfw0")]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -9.23148, 2.93, -35.5821)
+
+[node name="barrel" parent="." instance=ExtResource("6_hdita")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.6754, 12.9087, -42.7851)
+prompt_message = "Bubble the water"
