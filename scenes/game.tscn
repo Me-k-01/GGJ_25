@@ -37,10 +37,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.47822, -0.247829)
 [node name="Generator" parent="Player/SophiaSkin" index="4"]
 map_path = NodePath("../../..")
 
-[node name="InteractRay" parent="Player/SophiaSkin" index="8"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.09401, 2.40139)
-target_position = Vector3(0, 0, -2)
-
 [node name="SpringArm3D" parent="Player/CameraPivot" index="0"]
 collision_mask = 4
 
@@ -64,8 +60,43 @@ transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 9.5144
 
 [node name="AutomaticGenerator2" parent="." instance=ExtResource("9_tpaux")]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 13.969, 7.23157, 39.718)
+delay = 11.0
 
 [node name="AutomaticGenerator3" parent="." instance=ExtResource("9_tpaux")]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 18.0496, 7.23157, 39.718)
+delay = 12.0
+
+[node name="AutomaticGenerator5" parent="." instance=ExtResource("9_tpaux")]
+transform = Transform3D(-3.74542e-08, -0.856853, 0.515562, 1, -4.37114e-08, 0, 2.25359e-08, 0.515562, 0.856853, 20.4351, 11.1101, 92.4366)
+power = 150
+
+[node name="AutomaticGenerator6" parent="." instance=ExtResource("9_tpaux")]
+transform = Transform3D(-3.74542e-08, -0.856853, 0.515562, 1, -4.37114e-08, 0, 2.25359e-08, 0.515562, 0.856853, 21.1662, 11.1101, 96.919)
+delay = 11.0
+power = 180
+
+[node name="AutomaticGenerator8" parent="." instance=ExtResource("9_tpaux")]
+transform = Transform3D(-3.74542e-08, -0.856853, 0.515562, 1, -4.37114e-08, 0, 2.25359e-08, 0.515562, 0.856853, 21.7712, 11.1101, 101.375)
+delay = 12.0
+power = 210
+
+[node name="AutomaticGenerator9" parent="." instance=ExtResource("9_tpaux")]
+transform = Transform3D(-3.74542e-08, -0.856853, 0.515562, 1, -4.37114e-08, 0, 2.25359e-08, 0.515562, 0.856853, 22.5584, 11.1101, 105.743)
+delay = 13.0
+power = 240
+
+[node name="AutomaticGenerator10" parent="." instance=ExtResource("9_tpaux")]
+transform = Transform3D(-3.74542e-08, -0.856853, 0.515562, 1, -4.37114e-08, 0, 2.25359e-08, 0.515562, 0.856853, 23.0314, 11.1101, 110.204)
+delay = 14.0
+power = 220
+
+[node name="AutomaticGenerator7" parent="." instance=ExtResource("9_tpaux")]
+transform = Transform3D(-3.74542e-08, -0.856853, 0.515562, 1, -4.37114e-08, 0, 2.25359e-08, 0.515562, 0.856853, 22.426, 7.25721, 86.926)
+delay = 12.0
+power = 170
+
+[node name="AutomaticGenerator4" parent="." instance=ExtResource("9_tpaux")]
+transform = Transform3D(-3.56996e-08, -0.816712, 0.577045, 1, -4.37114e-08, 0, 2.52235e-08, 0.577045, 0.816712, 22.9044, 7.23157, 84.2429)
+power = 120
 
 [editable path="Player"]
