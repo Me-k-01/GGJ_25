@@ -44,10 +44,10 @@ light_color = Color(1, 0.6425, 0.35, 1)
 shadow_enabled = true
 
 [node name="WaterBubble" parent="." instance=ExtResource("6_dcwam")]
-transform = Transform3D(-0.852275, 0, -0.523094, 0, 1, 0, 0.523094, 0, -0.852275, 262.443, -55.5592, 320.233)
+transform = Transform3D(-0.852275, 0, -0.523094, 0, 1, 0, 0.523094, 0, -0.852275, 302.136, -56.795, 347.817)
 
 [node name="Cactus" parent="." instance=ExtResource("7_teql2")]
-transform = Transform3D(-0.852275, 0, -0.523094, 0, 1, 0, 0.523094, 0, -0.852275, 263.534, -56.9211, 332.867)
+transform = Transform3D(-0.852275, 0, -0.523094, 0, 1, 0, 0.523094, 0, -0.852275, 308.115, -56.9211, 361.417)
 bubble_path = NodePath("../WaterBubble")
 
 [node name="GardenLevel" parent="." instance=ExtResource("8_4lgjy")]
