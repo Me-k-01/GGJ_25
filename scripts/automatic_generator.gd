@@ -35,7 +35,7 @@ func _process(delta: float) -> void:
 			instance.move($"SpawnPosition".global_transform.origin)
 			var force = (instance.global_transform.origin - global_transform.origin)
 			#force = Vector3(force.x, 0, force.z)
-			force = force.normalized() * power
+			force = force.normalized() * power 
 			instance.apply_central_force(force)
 
 			is_on_cooldown = true

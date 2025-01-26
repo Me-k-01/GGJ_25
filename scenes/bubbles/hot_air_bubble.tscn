@@ -70,6 +70,7 @@ shader_parameter/color_texture = ExtResource("2_ugeot")
 
 [node name="HotAirBubble" groups=["air_bubble"] instance=ExtResource("1_8o865")]
 mass = 0.25
+gravity_scale = 0.0
 lifetime = 10.0
 levitation_height = 2.0
 float_force = 2.0

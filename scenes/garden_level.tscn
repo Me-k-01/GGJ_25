@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://7s1pgtr1bj4n"]
+[gd_scene load_steps=9 format=3 uid="uid://b44k7uy3u7j4h"]
 
 [ext_resource type="MeshLibrary" uid="uid://b6lll568yofw5" path="res://assets/prop_lib.tres" id="1_sxfan"]
 [ext_resource type="MeshLibrary" uid="uid://b5wufnvi8mahd" path="res://assets/ground_lib.tres" id="2_u0lqb"]
