@@ -48,8 +48,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.72077, 5.51981, -17.7156)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.23058, 4.15797, -13.1462)
 bubble = NodePath("../WaterBubble")
 
-[node name="Crate_bottles" parent="." node_paths=PackedStringArray("agents") instance=ExtResource("8_lmy67")]
+[node name="Crate_bottles" parent="." instance=ExtResource("8_lmy67")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.14143, 3.61916, -16.5239)
-agents = NodePath("")
 
 [editable path="Player"]
