@@ -2,17 +2,21 @@ extends CharacterBody3D
 
 var speed = 2
 
-var bubble = null
-@export var bubble_path : NodePath
+@export var bubble : Node = null
+#var position = null
+#@export var bubble_path : NodePath
 
 @onready var navigation_agent = $NavigationAgent3D
-
-func _ready() -> void:
-	bubble = get_node(bubble_path)
+ 
 
 func _process(delta: float) -> void:
-	velocity = Vector3.ZERO
+	velocity = Vector3.ZERO 
 	
+	if bubble == null :
+		# no target
+		return
+	#var pos = bubble.global_position # target
+		
 	navigation_agent.set_target_position(bubble.global_position)
 	velocity += (navigation_agent.get_next_path_position() - global_position).normalized() * speed
 	
