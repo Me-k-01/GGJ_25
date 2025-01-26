@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://5d0ocub2ghb8"]
+[gd_scene load_steps=9 format=3 uid="uid://5d0ocub2ghb8"]
 
 [ext_resource type="PackedScene" uid="uid://b44k7uy3u7j4h" path="res://scenes/garden_level.tscn" id="2_5c7tb"]
 [ext_resource type="Script" path="res://scripts/start_menu.gd" id="2_b4e1c"]
+[ext_resource type="FontFile" uid="uid://begeqpiyhnt2g" path="res://assets/others/ADELIA.otf" id="2_mndfb"]
 [ext_resource type="Environment" uid="uid://bt858ghsvw42j" path="res://assets/environment.tres" id="3_eh62d"]
 [ext_resource type="CameraAttributesPractical" uid="uid://dpxcsqx1yg1ok" path="res://assets/camera_attributes_practical.tres" id="4_pcofq"]
 
@@ -10,6 +11,8 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5advv"]
 bg_color = Color(0.974133, 0.33709, 0.522567, 1)
 border_color = Color(0, 0.542293, 0.896154, 1)
+
+[sub_resource type="Theme" id="Theme_402q2"]
 
 [node name="Start Menu" type="CanvasLayer"]
 
@@ -61,10 +64,12 @@ theme_override_constants/separation = 15
 [node name="Label" type="Label" parent="Menu/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme = SubResource("Theme_osbql")
-theme_override_colors/font_color = Color(0.97, 0.662833, 0, 1)
+theme_override_colors/font_color = Color(0.737483, 0.713955, 0.831718, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("2_mndfb")
 theme_override_font_sizes/font_size = 50
-text = "Game Title
+text = "The Bubblemancer
 "
 
 [node name="MarginContainer" type="MarginContainer" parent="Menu/MarginContainer/VBoxContainer"]
@@ -105,6 +110,21 @@ size_flags_vertical = 4
 theme_override_constants/outline_size = 7
 theme_override_font_sizes/font_size = 35
 text = "Quit
+"
+
+[node name="Label" type="Label" parent="Menu"]
+layout_mode = 0
+offset_left = 978.0
+offset_top = 606.0
+offset_right = 1264.0
+offset_bottom = 707.0
+theme = SubResource("Theme_402q2")
+theme_override_colors/font_color = Color(0.443137, 0, 0.454902, 1)
+theme_override_colors/font_shadow_color = Color(0.513726, 0.439216, 0.298039, 0.231373)
+text = "CONTROLS 
+- ZQSD / WASD  :  Move your character
+- Space : Jump (on bubbles or not)
+- Left Click :  Spawn a bubble
 "
 
 [node name="GardenLevel" parent="." instance=ExtResource("2_5c7tb")]
