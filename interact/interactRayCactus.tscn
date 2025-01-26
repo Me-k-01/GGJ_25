@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://l7cgiww1eh7m"]
+
+[ext_resource type="Script" path="res://interact/interact_ray_cactus.gd" id="1_0btli"]
+
+[node name="InteractRayCactus" type="RayCast3D"]
+target_position = Vector3(0, 0, -4)
+collision_mask = 2
+script = ExtResource("1_0btli")

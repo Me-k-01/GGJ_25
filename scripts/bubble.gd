@@ -61,3 +61,7 @@ func _integrate_forces(state: PhysicsDirectBodyState3D) -> void:
 func move(position):
 	global_transform.origin = position
 	start_y = position.y
+
+func pop() : 
+	lifetime = 3
+	# TODO play
