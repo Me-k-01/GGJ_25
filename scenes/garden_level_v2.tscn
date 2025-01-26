@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=4 uid="uid://1cxmu46xml5d"]
+[gd_scene load_steps=49 format=4 uid="uid://1cxmu46xml5d"]
 
 [ext_resource type="MeshLibrary" uid="uid://b6lll568yofw5" path="res://assets/prop_lib.tres" id="1_ad1bd"]
 [ext_resource type="MeshLibrary" uid="uid://b5wufnvi8mahd" path="res://assets/ground_lib.tres" id="2_c4ax5"]
@@ -25,6 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://bt3wn3h5tjsmi" path="res://assets/grid1_meshes/door-large-open.glb" id="24_kseop"]
 [ext_resource type="PackedScene" uid="uid://dvf4u6io5o6xs" path="res://interact/crate_bottles.tscn" id="24_we74p"]
 [ext_resource type="PackedScene" uid="uid://b5djrhyw5t4y3" path="res://interact/indications.tscn" id="25_kyeyp"]
+[ext_resource type="PackedScene" uid="uid://cjv13dpnu3so2" path="res://interact/indications_vin.tscn" id="26_q8vic"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_op5e2"]
 resource_name = "colormap"
@@ -731,3 +732,6 @@ metadata/_editor_floor_ = Vector3(0, 13, 0)
 
 [node name="Sign_help" parent="." instance=ExtResource("25_kyeyp")]
 transform = Transform3D(-0.419772, 0, 3.84967, 0, 3.87249, 0, -3.84967, 0, -0.419772, -68.3069, 0.763012, -20.6759)
+
+[node name="Sign_doublejump" parent="." instance=ExtResource("26_q8vic")]
+transform = Transform3D(1.75214, 0, 3.39545, 0, 3.82087, 0, -3.39545, 0, 1.75214, -24.5191, 0.750002, -22.3806)
