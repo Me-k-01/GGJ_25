@@ -4,7 +4,7 @@
 [ext_resource type="Environment" uid="uid://bt858ghsvw42j" path="res://assets/environment.tres" id="2_0qb0v"]
 [ext_resource type="CameraAttributesPractical" uid="uid://dpxcsqx1yg1ok" path="res://assets/camera_attributes_practical.tres" id="3_ew7hq"]
 [ext_resource type="PackedScene" uid="uid://bgpmouhwxfr2t" path="res://scenes/player/player.tscn" id="4_e0hry"]
-[ext_resource type="PackedScene" uid="uid://bynfhihlyqtf5" path="res://assets/Interactable_objects/ladder.tscn" id="5_hvtoa"]
+[ext_resource type="PackedScene" uid="uid://dpn7fuvh6rs3g" path="res://assets/grid1_meshes/ladder-long.glb" id="5_3wwe6"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -29,8 +29,7 @@ transform = Transform3D(0.0955686, 0.754539, -0.649259, -0.210865, 0.652788, 0.7
 light_color = Color(1, 0.6425, 0.35, 1)
 shadow_enabled = true
 
-[node name="ladder" parent="." instance=ExtResource("5_hvtoa")]
-transform = Transform3D(2.02824, 0, -0.917577, 0, 2.22614, 0, 0.917577, 0, 2.02824, -25.334, 0.758365, 36.7239)
-prompt_message = "[E] Monter l'échelle"
+[node name="ladder-long2" parent="." instance=ExtResource("5_3wwe6")]
+transform = Transform3D(2.00839, -0.35335, -0.943431, 0.0751082, 2.15082, -0.64567, 1.00463, 0.545595, 1.93432, -24.8985, 0.859169, 35.5768)
 
 [editable path="Player"]
