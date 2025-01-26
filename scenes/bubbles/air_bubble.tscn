@@ -3,7 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://hdirp6r467n5" path="res://scenes/bubbles/bubble.tscn" id="1_arvxw"]
 
 [node name="AirBubble" groups=["air_bubble"] instance=ExtResource("1_arvxw")]
-mass = 0.25
 lifetime = 10.0
 levitation_height = 2.0
 float_force = 2.0
