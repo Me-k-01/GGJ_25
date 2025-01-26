@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjv13dpnu3so2"]
+
+[ext_resource type="Script" path="res://interact/indications_vin.gd" id="1_wd14y"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_i7c63"]
+size = Vector3(0.678375, 0.893494, 0.916382)
+
+[node name="Sign_vin" type="StaticBody3D"]
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("1_wd14y")
+prompt_message = "Read"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.22558, 0, 0, 0, 1.22558, 0, 0, 0, 1.22558, -0.0556799, 0.568825, 0.418644)
+shape = SubResource("BoxShape3D_i7c63")
+
+[node name="prompt_vin" type="Label" parent="."]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -93.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 32
+text = "Greetings Mage.
+Bring the wine to the oasis to heal its ground !"
+horizontal_alignment = 1
+
+[connection signal="interacted" from="." to="." method="_on_interacted"]
